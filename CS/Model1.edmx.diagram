@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="00d66eb349364cb2826576b6c69b29ad" Name="Diagram1">
+        <EntityTypeShape EntityType="CS_ManagementModel.Dijelovi" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS_ManagementModel.Marka" Width="1.5" PointX="8.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS_ManagementModel.Model" Width="1.5" PointX="11" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS_ManagementModel.Servis" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS_ManagementModel.Serviser" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS_ManagementModel.Stavka_servisa" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS_ManagementModel.Usluge" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS_ManagementModel.Varijanta" Width="1.5" PointX="13.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS_ManagementModel.Vlasnik" Width="1.5" PointX="3.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS_ManagementModel.Vlasnistvo" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS_ManagementModel.Vozilo" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="CS_ManagementModel.FK_Stavka_servisa_Dijelovi" ManuallyRouted="false" />
+        <AssociationConnector Association="CS_ManagementModel.FK_Model_Marka" ManuallyRouted="false" />
+        <AssociationConnector Association="CS_ManagementModel.FK_Varijanta_Model" ManuallyRouted="false" />
+        <AssociationConnector Association="CS_ManagementModel.FK_Servis_Serviser" ManuallyRouted="false" />
+        <AssociationConnector Association="CS_ManagementModel.FK_Servis_Vozilo" ManuallyRouted="false" />
+        <AssociationConnector Association="CS_ManagementModel.FK_Stavka_servisa_Servis" ManuallyRouted="false" />
+        <AssociationConnector Association="CS_ManagementModel.FK_Stavka_servisa_Usluge" ManuallyRouted="false" />
+        <AssociationConnector Association="CS_ManagementModel.FK_Vlasnistvo_Vlasnik" ManuallyRouted="false" />
+        <AssociationConnector Association="CS_ManagementModel.FK_Vlasnistvo_Vozilo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CS_ManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Dijelovi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Naziv" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Jed_cijena" Type="float" Nullable="false" />
+          <Property Name="Original_dio" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Marka">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Naziv" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Model">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Naziv" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID_marke" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Servis">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Datum_vrijeme" Type="datetime" Nullable="false" />
+          <Property Name="Opis" Type="varchar" MaxLength="255" />
+          <Property Name="ID_serviser" Type="int" Nullable="false" />
+          <Property Name="ID_vozilo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Serviser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ime" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Prezime" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Kor_ime" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Lozinka" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Admin" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Stavka servisa">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="ID_servis" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID_servis" Type="int" Nullable="false" />
+          <Property Name="ID_dio" Type="int" Nullable="false" />
+          <Property Name="ID_usluga" Type="int" Nullable="false" />
+          <Property Name="Kolicina" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usluge">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Naziv" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Norma_sati" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Varijanta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Oznaka_motora" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mjenjač" Type="int" />
+          <Property Name="Karoserija" Type="int" />
+          <Property Name="ID_modela" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vlasnik">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ime" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Prezime" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telefon" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Vlasnistvo">
+          <Key>
+            <PropertyRef Name="ID_vlasnik" />
+            <PropertyRef Name="ID_vozilo" />
+            <PropertyRef Name="Pocetak_vlasnistva" />
+          </Key>
+          <Property Name="ID_vlasnik" Type="int" Nullable="false" />
+          <Property Name="ID_vozilo" Type="int" Nullable="false" />
+          <Property Name="Pocetak_vlasnistva" Type="date" Nullable="false" />
+          <Property Name="Kraj_vlasnistva" Type="date" />
+        </EntityType>
+        <EntityType Name="Vozilo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VIN" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Reg_oznaka" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Reg_do" Type="date" />
+          <Property Name="God_proizvodnje" Type="date" />
+          <Property Name="ID_varijante" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Model_Marka">
+          <End Role="Marka" Type="Self.Marka" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Model" Type="Self.Model" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Marka">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Model">
+              <PropertyRef Name="ID_marke" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Servis_Serviser">
+          <End Role="Serviser" Type="Self.Serviser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Servis" Type="Self.Servis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Serviser">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Servis">
+              <PropertyRef Name="ID_serviser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Servis_Vozilo">
+          <End Role="Vozilo" Type="Self.Vozilo" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Servis" Type="Self.Servis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vozilo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Servis">
+              <PropertyRef Name="ID_vozilo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Stavka servisa_Dijelovi">
+          <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Stavka servisa" Type="Self.Stavka servisa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dijelovi">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Stavka servisa">
+              <PropertyRef Name="ID_dio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Stavka servisa_Servis">
+          <End Role="Servis" Type="Self.Servis" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Stavka servisa" Type="Self.Stavka servisa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servis">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Stavka servisa">
+              <PropertyRef Name="ID_servis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Stavka servisa_Usluge">
+          <End Role="Usluge" Type="Self.Usluge" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Stavka servisa" Type="Self.Stavka servisa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usluge">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Stavka servisa">
+              <PropertyRef Name="ID_usluga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Varijanta_Model">
+          <End Role="Model" Type="Self.Model" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Varijanta" Type="Self.Varijanta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Model">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Varijanta">
+              <PropertyRef Name="ID_modela" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vlasnistvo_Vlasnik">
+          <End Role="Vlasnik" Type="Self.Vlasnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Vlasnistvo" Type="Self.Vlasnistvo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vlasnik">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Vlasnistvo">
+              <PropertyRef Name="ID_vlasnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vlasnistvo_Vozilo">
+          <End Role="Vozilo" Type="Self.Vozilo" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Vlasnistvo" Type="Self.Vlasnistvo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vozilo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Vlasnistvo">
+              <PropertyRef Name="ID_vozilo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CS_ManagementModelStoreContainer">
+          <EntitySet Name="Dijelovi" EntityType="Self.Dijelovi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Marka" EntityType="Self.Marka" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Model" EntityType="Self.Model" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Servis" EntityType="Self.Servis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Serviser" EntityType="Self.Serviser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stavka servisa" EntityType="Self.Stavka servisa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usluge" EntityType="Self.Usluge" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Varijanta" EntityType="Self.Varijanta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vlasnik" EntityType="Self.Vlasnik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vlasnistvo" EntityType="Self.Vlasnistvo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vozilo" EntityType="Self.Vozilo" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Model_Marka" Association="Self.FK_Model_Marka">
+            <End Role="Marka" EntitySet="Marka" />
+            <End Role="Model" EntitySet="Model" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Servis_Serviser" Association="Self.FK_Servis_Serviser">
+            <End Role="Serviser" EntitySet="Serviser" />
+            <End Role="Servis" EntitySet="Servis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Servis_Vozilo" Association="Self.FK_Servis_Vozilo">
+            <End Role="Vozilo" EntitySet="Vozilo" />
+            <End Role="Servis" EntitySet="Servis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Stavka servisa_Dijelovi" Association="Self.FK_Stavka servisa_Dijelovi">
+            <End Role="Dijelovi" EntitySet="Dijelovi" />
+            <End Role="Stavka servisa" EntitySet="Stavka servisa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Stavka servisa_Servis" Association="Self.FK_Stavka servisa_Servis">
+            <End Role="Servis" EntitySet="Servis" />
+            <End Role="Stavka servisa" EntitySet="Stavka servisa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Stavka servisa_Usluge" Association="Self.FK_Stavka servisa_Usluge">
+            <End Role="Usluge" EntitySet="Usluge" />
+            <End Role="Stavka servisa" EntitySet="Stavka servisa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Varijanta_Model" Association="Self.FK_Varijanta_Model">
+            <End Role="Model" EntitySet="Model" />
+            <End Role="Varijanta" EntitySet="Varijanta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vlasnistvo_Vlasnik" Association="Self.FK_Vlasnistvo_Vlasnik">
+            <End Role="Vlasnik" EntitySet="Vlasnik" />
+            <End Role="Vlasnistvo" EntitySet="Vlasnistvo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vlasnistvo_Vozilo" Association="Self.FK_Vlasnistvo_Vozilo">
+            <End Role="Vozilo" EntitySet="Vozilo" />
+            <End Role="Vlasnistvo" EntitySet="Vlasnistvo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CS_ManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Dijelovi">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Jed_cijena" Type="Double" Nullable="false" />
+          <Property Name="Original_dio" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Stavka_servisa" Relationship="Self.FK_Stavka_servisa_Dijelovi" FromRole="Dijelovi" ToRole="Stavka_servisa" />
+        </EntityType>
+        <EntityType Name="Marka">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Model" Relationship="Self.FK_Model_Marka" FromRole="Marka" ToRole="Model" />
+        </EntityType>
+        <EntityType Name="Model">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_marke" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Marka" Relationship="Self.FK_Model_Marka" FromRole="Model" ToRole="Marka" />
+          <NavigationProperty Name="Varijanta" Relationship="Self.FK_Varijanta_Model" FromRole="Model" ToRole="Varijanta" />
+        </EntityType>
+        <EntityType Name="Servis">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Datum_vrijeme" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Opis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ID_serviser" Type="Int32" Nullable="false" />
+          <Property Name="ID_vozilo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Serviser" Relationship="Self.FK_Servis_Serviser" FromRole="Servis" ToRole="Serviser" />
+          <NavigationProperty Name="Vozilo" Relationship="Self.FK_Servis_Vozilo" FromRole="Servis" ToRole="Vozilo" />
+          <NavigationProperty Name="Stavka_servisa" Relationship="Self.FK_Stavka_servisa_Servis" FromRole="Servis" ToRole="Stavka_servisa" />
+        </EntityType>
+        <EntityType Name="Serviser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Kor_ime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Lozinka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Admin" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Servis" Relationship="Self.FK_Servis_Serviser" FromRole="Serviser" ToRole="Servis" />
+        </EntityType>
+        <EntityType Name="Stavka_servisa">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="ID_servis" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_servis" Type="Int32" Nullable="false" />
+          <Property Name="ID_dio" Type="Int32" Nullable="false" />
+          <Property Name="ID_usluga" Type="Int32" Nullable="false" />
+          <Property Name="Kolicina" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Dijelovi" Relationship="Self.FK_Stavka_servisa_Dijelovi" FromRole="Stavka_servisa" ToRole="Dijelovi" />
+          <NavigationProperty Name="Servis" Relationship="Self.FK_Stavka_servisa_Servis" FromRole="Stavka_servisa" ToRole="Servis" />
+          <NavigationProperty Name="Usluge" Relationship="Self.FK_Stavka_servisa_Usluge" FromRole="Stavka_servisa" ToRole="Usluge" />
+        </EntityType>
+        <EntityType Name="Usluge">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Norma_sati" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Stavka_servisa" Relationship="Self.FK_Stavka_servisa_Usluge" FromRole="Usluge" ToRole="Stavka_servisa" />
+        </EntityType>
+        <EntityType Name="Varijanta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Oznaka_motora" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mjenjač" Type="Int32" />
+          <Property Name="Karoserija" Type="Int32" />
+          <Property Name="ID_modela" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Model" Relationship="Self.FK_Varijanta_Model" FromRole="Varijanta" ToRole="Model" />
+        </EntityType>
+        <EntityType Name="Vlasnik">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Vlasnistvo" Relationship="Self.FK_Vlasnistvo_Vlasnik" FromRole="Vlasnik" ToRole="Vlasnistvo" />
+        </EntityType>
+        <EntityType Name="Vlasnistvo">
+          <Key>
+            <PropertyRef Name="ID_vlasnik" />
+            <PropertyRef Name="ID_vozilo" />
+            <PropertyRef Name="Pocetak_vlasnistva" />
+          </Key>
+          <Property Name="ID_vlasnik" Type="Int32" Nullable="false" />
+          <Property Name="ID_vozilo" Type="Int32" Nullable="false" />
+          <Property Name="Pocetak_vlasnistva" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Kraj_vlasnistva" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Vlasnik" Relationship="Self.FK_Vlasnistvo_Vlasnik" FromRole="Vlasnistvo" ToRole="Vlasnik" />
+          <NavigationProperty Name="Vozilo" Relationship="Self.FK_Vlasnistvo_Vozilo" FromRole="Vlasnistvo" ToRole="Vozilo" />
+        </EntityType>
+        <EntityType Name="Vozilo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Reg_oznaka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Reg_do" Type="DateTime" Precision="0" />
+          <Property Name="God_proizvodnje" Type="DateTime" Precision="0" />
+          <Property Name="ID_varijante" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Servis" Relationship="Self.FK_Servis_Vozilo" FromRole="Vozilo" ToRole="Servis" />
+          <NavigationProperty Name="Vlasnistvo" Relationship="Self.FK_Vlasnistvo_Vozilo" FromRole="Vozilo" ToRole="Vlasnistvo" />
+        </EntityType>
+        <Association Name="FK_Stavka_servisa_Dijelovi">
+          <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Stavka_servisa" Type="Self.Stavka_servisa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dijelovi">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Stavka_servisa">
+              <PropertyRef Name="ID_dio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Model_Marka">
+          <End Role="Marka" Type="Self.Marka" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Model" Type="Self.Model" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Marka">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Model">
+              <PropertyRef Name="ID_marke" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Varijanta_Model">
+          <End Role="Model" Type="Self.Model" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Varijanta" Type="Self.Varijanta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Model">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Varijanta">
+              <PropertyRef Name="ID_modela" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Servis_Serviser">
+          <End Role="Serviser" Type="Self.Serviser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Servis" Type="Self.Servis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Serviser">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Servis">
+              <PropertyRef Name="ID_serviser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Servis_Vozilo">
+          <End Role="Vozilo" Type="Self.Vozilo" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Servis" Type="Self.Servis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vozilo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Servis">
+              <PropertyRef Name="ID_vozilo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Stavka_servisa_Servis">
+          <End Role="Servis" Type="Self.Servis" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Stavka_servisa" Type="Self.Stavka_servisa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servis">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Stavka_servisa">
+              <PropertyRef Name="ID_servis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Stavka_servisa_Usluge">
+          <End Role="Usluge" Type="Self.Usluge" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Stavka_servisa" Type="Self.Stavka_servisa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usluge">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Stavka_servisa">
+              <PropertyRef Name="ID_usluga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vlasnistvo_Vlasnik">
+          <End Role="Vlasnik" Type="Self.Vlasnik" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Vlasnistvo" Type="Self.Vlasnistvo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vlasnik">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Vlasnistvo">
+              <PropertyRef Name="ID_vlasnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vlasnistvo_Vozilo">
+          <End Role="Vozilo" Type="Self.Vozilo" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Vlasnistvo" Type="Self.Vlasnistvo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vozilo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Vlasnistvo">
+              <PropertyRef Name="ID_vozilo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CS_ManagementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Dijelovi" EntityType="Self.Dijelovi" />
+          <EntitySet Name="Marka" EntityType="Self.Marka" />
+          <EntitySet Name="Model" EntityType="Self.Model" />
+          <EntitySet Name="Servis" EntityType="Self.Servis" />
+          <EntitySet Name="Serviser" EntityType="Self.Serviser" />
+          <EntitySet Name="Stavka_servisa" EntityType="Self.Stavka_servisa" />
+          <EntitySet Name="Usluge" EntityType="Self.Usluge" />
+          <EntitySet Name="Varijanta" EntityType="Self.Varijanta" />
+          <EntitySet Name="Vlasnik" EntityType="Self.Vlasnik" />
+          <EntitySet Name="Vlasnistvo" EntityType="Self.Vlasnistvo" />
+          <EntitySet Name="Vozilo" EntityType="Self.Vozilo" />
+          <AssociationSet Name="FK_Stavka_servisa_Dijelovi" Association="Self.FK_Stavka_servisa_Dijelovi">
+            <End Role="Dijelovi" EntitySet="Dijelovi" />
+            <End Role="Stavka_servisa" EntitySet="Stavka_servisa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Model_Marka" Association="Self.FK_Model_Marka">
+            <End Role="Marka" EntitySet="Marka" />
+            <End Role="Model" EntitySet="Model" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Varijanta_Model" Association="Self.FK_Varijanta_Model">
+            <End Role="Model" EntitySet="Model" />
+            <End Role="Varijanta" EntitySet="Varijanta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Servis_Serviser" Association="Self.FK_Servis_Serviser">
+            <End Role="Serviser" EntitySet="Serviser" />
+            <End Role="Servis" EntitySet="Servis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Servis_Vozilo" Association="Self.FK_Servis_Vozilo">
+            <End Role="Vozilo" EntitySet="Vozilo" />
+            <End Role="Servis" EntitySet="Servis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Stavka_servisa_Servis" Association="Self.FK_Stavka_servisa_Servis">
+            <End Role="Servis" EntitySet="Servis" />
+            <End Role="Stavka_servisa" EntitySet="Stavka_servisa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Stavka_servisa_Usluge" Association="Self.FK_Stavka_servisa_Usluge">
+            <End Role="Usluge" EntitySet="Usluge" />
+            <End Role="Stavka_servisa" EntitySet="Stavka_servisa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vlasnistvo_Vlasnik" Association="Self.FK_Vlasnistvo_Vlasnik">
+            <End Role="Vlasnik" EntitySet="Vlasnik" />
+            <End Role="Vlasnistvo" EntitySet="Vlasnistvo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vlasnistvo_Vozilo" Association="Self.FK_Vlasnistvo_Vozilo">
+            <End Role="Vozilo" EntitySet="Vozilo" />
+            <End Role="Vlasnistvo" EntitySet="Vlasnistvo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CS_ManagementModelStoreContainer" CdmEntityContainer="CS_ManagementEntities">
+          <EntitySetMapping Name="Dijelovi">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Dijelovi">
+              <MappingFragment StoreEntitySet="Dijelovi">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Jed_cijena" ColumnName="Jed_cijena" />
+                <ScalarProperty Name="Original_dio" ColumnName="Original_dio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Marka">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Marka">
+              <MappingFragment StoreEntitySet="Marka">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Model">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Model">
+              <MappingFragment StoreEntitySet="Model">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="ID_marke" ColumnName="ID_marke" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Servis">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Servis">
+              <MappingFragment StoreEntitySet="Servis">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Datum_vrijeme" ColumnName="Datum_vrijeme" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
+                <ScalarProperty Name="ID_serviser" ColumnName="ID_serviser" />
+                <ScalarProperty Name="ID_vozilo" ColumnName="ID_vozilo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Serviser">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Serviser">
+              <MappingFragment StoreEntitySet="Serviser">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="Kor_ime" ColumnName="Kor_ime" />
+                <ScalarProperty Name="Lozinka" ColumnName="Lozinka" />
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stavka_servisa">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Stavka_servisa">
+              <MappingFragment StoreEntitySet="Stavka servisa">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_servis" ColumnName="ID_servis" />
+                <ScalarProperty Name="ID_dio" ColumnName="ID_dio" />
+                <ScalarProperty Name="ID_usluga" ColumnName="ID_usluga" />
+                <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usluge">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Usluge">
+              <MappingFragment StoreEntitySet="Usluge">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+                <ScalarProperty Name="Norma_sati" ColumnName="Norma_sati" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Varijanta">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Varijanta">
+              <MappingFragment StoreEntitySet="Varijanta">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Oznaka_motora" ColumnName="Oznaka_motora" />
+                <ScalarProperty Name="Mjenjač" ColumnName="Mjenjač" />
+                <ScalarProperty Name="Karoserija" ColumnName="Karoserija" />
+                <ScalarProperty Name="ID_modela" ColumnName="ID_modela" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vlasnik">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Vlasnik">
+              <MappingFragment StoreEntitySet="Vlasnik">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vlasnistvo">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Vlasnistvo">
+              <MappingFragment StoreEntitySet="Vlasnistvo">
+                <ScalarProperty Name="ID_vlasnik" ColumnName="ID_vlasnik" />
+                <ScalarProperty Name="ID_vozilo" ColumnName="ID_vozilo" />
+                <ScalarProperty Name="Pocetak_vlasnistva" ColumnName="Pocetak_vlasnistva" />
+                <ScalarProperty Name="Kraj_vlasnistva" ColumnName="Kraj_vlasnistva" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vozilo">
+            <EntityTypeMapping TypeName="CS_ManagementModel.Vozilo">
+              <MappingFragment StoreEntitySet="Vozilo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VIN" ColumnName="VIN" />
+                <ScalarProperty Name="Reg_oznaka" ColumnName="Reg_oznaka" />
+                <ScalarProperty Name="Reg_do" ColumnName="Reg_do" />
+                <ScalarProperty Name="God_proizvodnje" ColumnName="God_proizvodnje" />
+                <ScalarProperty Name="ID_varijante" ColumnName="ID_varijante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

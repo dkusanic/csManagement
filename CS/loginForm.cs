@@ -20,6 +20,11 @@ namespace CS
             string lozinka = lozinkaTextbox.Text;
         }
 
+        /// <summary>
+        /// Rukuje pritiskom tipke Enter na tipkovnici
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lozinkaTextbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -28,6 +33,12 @@ namespace CS
             }
         }
 
+
+        /// <summary>
+        /// Rukuje klikom na gumb PRIJAVA
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void prijavaButton_Click(object sender, EventArgs e)
         {
             using (var context = new CS_ManagementEntities())

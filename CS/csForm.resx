@@ -127,6 +127,24 @@
   <data name="aplikacijaToolStripMenuItem.Text" xml:space="preserve">
     <value>Aplikacija</value>
   </data>
+  <data name="pregledVozilaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="pregledVozilaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pregled vozila</value>
+  </data>
+  <data name="unosVozilaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="unosVozilaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Unos vozila</value>
+  </data>
+  <data name="bazaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="bazaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Baza</value>
+  </data>
   <data name="vozilaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 24</value>
   </data>
@@ -138,12 +156,6 @@
   </data>
   <data name="servisToolStripMenuItem.Text" xml:space="preserve">
     <value>Servis</value>
-  </data>
-  <data name="pregledToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
-  </data>
-  <data name="pregledToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Pregled</value>
   </data>
   <data name="vlasniciToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 24</value>
@@ -188,18 +200,6 @@
   <data name="izlazToolStripMenuItem.Text" xml:space="preserve">
     <value>Izlaz</value>
   </data>
-  <data name="pregledVozilaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
-  </data>
-  <data name="pregledVozilaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pregled vozila</value>
-  </data>
-  <data name="unosVozilaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
-  </data>
-  <data name="unosVozilaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Unos vozila</value>
-  </data>
   <data name="unosServisaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 26</value>
   </data>
@@ -211,12 +211,6 @@
   </data>
   <data name="pregledServisaToolStripMenuItem.Text" xml:space="preserve">
     <value>Pregled servisa</value>
-  </data>
-  <data name="bazaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
-  </data>
-  <data name="bazaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Baza</value>
   </data>
   <data name="markaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 26</value>
@@ -258,6 +252,12 @@
     <value>181, 26</value>
   </data>
   <data name="pregledToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pregled</value>
+  </data>
+  <data name="pregledToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="pregledToolStripMenuItem1.Text" xml:space="preserve">
     <value>Pregled</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

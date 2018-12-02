@@ -75,6 +75,7 @@
     <Compile Include="Marka.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -92,6 +93,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Views.cs" />
+    <Compile Include="pregledVozilaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pregledVozilaForm.Designer.cs">
+      <DependentUpon>pregledVozilaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,6 +137,9 @@
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pregledVozilaForm.resx">
+      <DependentUpon>pregledVozilaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -146,6 +157,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Marka.datasource" />
+    <None Include="Properties\DataSources\Model.datasource" />
+    <None Include="Properties\DataSources\Servis.datasource" />
+    <None Include="Properties\DataSources\Varijanta.datasource" />
+    <None Include="Properties\DataSources\Vozilo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

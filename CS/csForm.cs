@@ -24,6 +24,11 @@ namespace CS
             provjeraAdmin(login.admin);
         }
 
+        /// <summary>
+        /// Rukuje klikom na gumb za izlaz iz aplikacije
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void izlazToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -41,6 +46,14 @@ namespace CS
                 bazaToolStripMenuItem1.Visible = false;
                 serviseriToolStripMenuItem.Visible = false;
             }
+        }
+
+        private void pregledVozilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pregledVozilaForm pregledVozila = new pregledVozilaForm();
+            pregledVozila.WindowState = FormWindowState.Maximized;
+            pregledVozila.MdiParent = this;
+            pregledVozila.Show();
         }
     }
 }

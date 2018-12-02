@@ -99,6 +99,7 @@
             // 
             this.pregledVozilaToolStripMenuItem.Name = "pregledVozilaToolStripMenuItem";
             resources.ApplyResources(this.pregledVozilaToolStripMenuItem, "pregledVozilaToolStripMenuItem");
+            this.pregledVozilaToolStripMenuItem.Click += new System.EventHandler(this.pregledVozilaToolStripMenuItem_Click);
             // 
             // unosVozilaToolStripMenuItem
             // 
@@ -186,6 +187,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "csForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

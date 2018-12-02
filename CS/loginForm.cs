@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CS
@@ -32,7 +27,19 @@ namespace CS
 
         private void prijavaButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            using (var context = new CS_ManagementEntities())
+            {
+                var serviser = context.Serviser.Where(s => s.Kor_ime == korisnikTextbox.Text).FirstOrDefault<Serviser>();
+                if (serviser != null)
+                {
+                    if (serviser.Lozinka == lozinkaTextbox.Text)
+                        this.Close();
+                    else
+                        MessageBox.Show("Netočna lozinka!");
+                }
+                else
+                    MessageBox.Show("Nepostojeći korisnik!");
+            }
         }
     }
 }

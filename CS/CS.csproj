@@ -101,6 +101,7 @@
     <Compile Include="Serviser.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServiserMetode.cs" />
     <Compile Include="Stavka_servisa.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

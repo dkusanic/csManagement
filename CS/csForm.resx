@@ -117,26 +117,279 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="aplikacijaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="aplikacijaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Aplikacija</value>
+  </data>
+  <data name="vozilaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 24</value>
+  </data>
+  <data name="vozilaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vozila</value>
+  </data>
+  <data name="servisToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 24</value>
+  </data>
+  <data name="servisToolStripMenuItem.Text" xml:space="preserve">
+    <value>Servis</value>
+  </data>
+  <data name="pregledToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="pregledToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Pregled</value>
+  </data>
+  <data name="vlasniciToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 24</value>
+  </data>
+  <data name="vlasniciToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vlasnici</value>
+  </data>
+  <data name="serviseriToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="serviseriToolStripMenuItem.Text" xml:space="preserve">
+    <value>Serviseri</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1275, 28</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="izlazToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="izlazToolStripMenuItem.Text" xml:space="preserve">
+    <value>Izlaz</value>
+  </data>
+  <data name="pregledVozilaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="pregledVozilaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pregled vozila</value>
+  </data>
+  <data name="unosVozilaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="unosVozilaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Unos vozila</value>
+  </data>
+  <data name="unosServisaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 26</value>
+  </data>
+  <data name="unosServisaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Unos servisa</value>
+  </data>
+  <data name="pregledServisaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 26</value>
+  </data>
+  <data name="pregledServisaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pregled servisa</value>
+  </data>
+  <data name="bazaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="bazaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Baza</value>
+  </data>
+  <data name="markaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="markaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Marka</value>
+  </data>
+  <data name="modelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="modelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="varijantaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="varijantaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Varijanta</value>
+  </data>
+  <data name="bazaToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 26</value>
+  </data>
+  <data name="bazaToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Baza</value>
+  </data>
+  <data name="dijeloviToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="dijeloviToolStripMenuItem.Text" xml:space="preserve">
+    <value>Dijelovi</value>
+  </data>
+  <data name="uslugeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="uslugeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Usluge</value>
+  </data>
+  <data name="pregledToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 26</value>
+  </data>
+  <data name="pregledToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pregled</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1275, 541</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CS Management</value>
+  </data>
+  <data name="&gt;&gt;aplikacijaToolStripMenuItem.Name" xml:space="preserve">
+    <value>aplikacijaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;aplikacijaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;vozilaToolStripMenuItem.Name" xml:space="preserve">
+    <value>vozilaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;vozilaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;servisToolStripMenuItem.Name" xml:space="preserve">
+    <value>servisToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;servisToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;izlazToolStripMenuItem.Name" xml:space="preserve">
+    <value>izlazToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;izlazToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pregledVozilaToolStripMenuItem.Name" xml:space="preserve">
+    <value>pregledVozilaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;pregledVozilaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unosVozilaToolStripMenuItem.Name" xml:space="preserve">
+    <value>unosVozilaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;unosVozilaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unosServisaToolStripMenuItem.Name" xml:space="preserve">
+    <value>unosServisaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;unosServisaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pregledServisaToolStripMenuItem.Name" xml:space="preserve">
+    <value>pregledServisaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;pregledServisaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bazaToolStripMenuItem.Name" xml:space="preserve">
+    <value>bazaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;bazaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;markaToolStripMenuItem.Name" xml:space="preserve">
+    <value>markaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;markaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modelToolStripMenuItem.Name" xml:space="preserve">
+    <value>modelToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;modelToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;varijantaToolStripMenuItem.Name" xml:space="preserve">
+    <value>varijantaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;varijantaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bazaToolStripMenuItem1.Name" xml:space="preserve">
+    <value>bazaToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;bazaToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dijeloviToolStripMenuItem.Name" xml:space="preserve">
+    <value>dijeloviToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;dijeloviToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;uslugeToolStripMenuItem.Name" xml:space="preserve">
+    <value>uslugeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;uslugeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;serviseriToolStripMenuItem.Name" xml:space="preserve">
+    <value>serviseriToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;serviseriToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pregledToolStripMenuItem.Name" xml:space="preserve">
+    <value>pregledToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;pregledToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;vlasniciToolStripMenuItem.Name" xml:space="preserve">
+    <value>vlasniciToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;vlasniciToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pregledToolStripMenuItem1.Name" xml:space="preserve">
+    <value>pregledToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;pregledToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>csForm</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>CS Management</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>hr-HR</value>
-  </metadata>
 </root>

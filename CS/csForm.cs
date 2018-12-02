@@ -21,7 +21,26 @@ namespace CS
         {
             loginForm login = new loginForm();
             login.ShowDialog();
-            
+            provjeraAdmin(login.admin);
+        }
+
+        private void izlazToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// Skrivanje admin funkcionalnosti od servisera
+        /// </summary>
+        /// <param name="a">Parametar tipa bool koji se predaje u login formi</param>
+        private void provjeraAdmin(bool a)
+        {
+            if(a==false)
+            {
+                bazaToolStripMenuItem.Visible = false;
+                bazaToolStripMenuItem1.Visible = false;
+                serviseriToolStripMenuItem.Visible = false;
+            }
         }
     }
 }

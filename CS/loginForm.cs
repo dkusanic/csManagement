@@ -7,14 +7,17 @@ namespace CS
 {
     public partial class loginForm : Form
     {
+        public bool admin = false;
         public loginForm()
         {
             InitializeComponent();
         }
 
-        private void loginForm_Load(object sender, EventArgs e)
+        public void loginForm_Load(object sender, EventArgs e)
         {
             this.ActiveControl = korisnikTextbox;
+            string korisnik = korisnikTextbox.Text;
+            string lozinka = lozinkaTextbox.Text;
         }
 
         private void lozinkaTextbox_KeyDown(object sender, KeyEventArgs e)
@@ -25,14 +28,16 @@ namespace CS
             }
         }
 
-        private void prijavaButton_Click(object sender, EventArgs e)
+        public void prijavaButton_Click(object sender, EventArgs e)
         {
             using (var context = new CS_ManagementEntities())
             {
-                var serviser = context.Serviser.Where(s => s.Kor_ime == korisnikTextbox.Text).FirstOrDefault<Serviser>();
-                if (serviser != null)
+                var prijavljeniServiser = context.Serviser.Where(s => s.Kor_ime == korisnikTextbox.Text).FirstOrDefault<Serviser>();
+                if (prijavljeniServiser != null)
                 {
-                    if (serviser.Lozinka == lozinkaTextbox.Text)
+                    if (prijavljeniServiser.Admin == true)
+                        admin = true;
+                    if (prijavljeniServiser.Lozinka == lozinkaTextbox.Text)
                         this.Close();
                     else
                         MessageBox.Show("Netočna lozinka!");

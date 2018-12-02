@@ -24,15 +24,33 @@ namespace CS
 
         private void pregledVozilaForm_Load(object sender, EventArgs e)
         {
+            pregledVozila();
+            pregledServisa();
+        }
+
+        private void pregledVozila()
+        {
             BindingList<Vozilo> listaVozila = null;
-            BindingList<Servis> listaServisa = null;
             using (var db = new CS_ManagementEntities())
             {
                 listaVozila = new BindingList<Vozilo>(db.Vozilo.ToList());
-                listaServisa = new BindingList<Servis>(db.Servis.ToList());
             }
             voziloBindingSource.DataSource = listaVozila;
+        }
+
+        private void pregledServisa()
+        {
+            BindingList<Servis> listaServisa = null;
+            using (var db = new CS_ManagementEntities())
+            {
+                listaServisa = new BindingList<Servis>(db.Servis.ToList());
+            }
             servisBindingSource.DataSource = listaServisa;
+        }
+
+        private void vozilaDgv_SelectionChanged(object sender, EventArgs e)
+        {
+            pregledServisa();
         }
     }
 }

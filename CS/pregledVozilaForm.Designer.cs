@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.vozilaDgv = new System.Windows.Forms.DataGridView();
-            this.vozilaLabel = new System.Windows.Forms.Label();
-            this.servisLabel = new System.Windows.Forms.Label();
-            this.servisiDgv = new System.Windows.Forms.DataGridView();
-            this.servisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.regoznakaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +39,9 @@
             this.servisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vlasnistvoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.voziloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vozilaLabel = new System.Windows.Forms.Label();
+            this.servisLabel = new System.Windows.Forms.Label();
+            this.servisiDgv = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumvrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,10 +49,12 @@
             this.iDvoziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stavkaservisaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.servisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.voziloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.vozilaDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servisiDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servisBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,49 +79,7 @@
             this.vozilaDgv.RowTemplate.Height = 24;
             this.vozilaDgv.Size = new System.Drawing.Size(917, 282);
             this.vozilaDgv.TabIndex = 0;
-            // 
-            // vozilaLabel
-            // 
-            this.vozilaLabel.AutoSize = true;
-            this.vozilaLabel.Location = new System.Drawing.Point(12, 9);
-            this.vozilaLabel.Name = "vozilaLabel";
-            this.vozilaLabel.Size = new System.Drawing.Size(87, 17);
-            this.vozilaLabel.TabIndex = 1;
-            this.vozilaLabel.Text = "Popis vozila:";
-            // 
-            // servisLabel
-            // 
-            this.servisLabel.AutoSize = true;
-            this.servisLabel.Location = new System.Drawing.Point(15, 318);
-            this.servisLabel.Name = "servisLabel";
-            this.servisLabel.Size = new System.Drawing.Size(96, 17);
-            this.servisLabel.TabIndex = 2;
-            this.servisLabel.Text = "Popis servisa:";
-            // 
-            // servisiDgv
-            // 
-            this.servisiDgv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.servisiDgv.AutoGenerateColumns = false;
-            this.servisiDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.servisiDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn1,
-            this.datumvrijemeDataGridViewTextBoxColumn,
-            this.opisDataGridViewTextBoxColumn,
-            this.iDserviserDataGridViewTextBoxColumn,
-            this.iDvoziloDataGridViewTextBoxColumn,
-            this.voziloDataGridViewTextBoxColumn,
-            this.stavkaservisaDataGridViewTextBoxColumn});
-            this.servisiDgv.DataSource = this.servisBindingSource;
-            this.servisiDgv.Location = new System.Drawing.Point(12, 339);
-            this.servisiDgv.Name = "servisiDgv";
-            this.servisiDgv.RowTemplate.Height = 24;
-            this.servisiDgv.Size = new System.Drawing.Size(917, 282);
-            this.servisiDgv.TabIndex = 3;
-            // 
-            // servisBindingSource
-            // 
-            this.servisBindingSource.DataSource = typeof(CS.Servis);
+            this.vozilaDgv.SelectionChanged += new System.EventHandler(this.vozilaDgv_SelectionChanged);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -177,9 +135,44 @@
             // 
             this.voziloBindingSource.DataSource = typeof(CS.Vozilo);
             // 
-            // voziloBindingSource1
+            // vozilaLabel
             // 
-            this.voziloBindingSource1.DataSource = typeof(CS.Vozilo);
+            this.vozilaLabel.AutoSize = true;
+            this.vozilaLabel.Location = new System.Drawing.Point(12, 9);
+            this.vozilaLabel.Name = "vozilaLabel";
+            this.vozilaLabel.Size = new System.Drawing.Size(87, 17);
+            this.vozilaLabel.TabIndex = 1;
+            this.vozilaLabel.Text = "Popis vozila:";
+            // 
+            // servisLabel
+            // 
+            this.servisLabel.AutoSize = true;
+            this.servisLabel.Location = new System.Drawing.Point(15, 318);
+            this.servisLabel.Name = "servisLabel";
+            this.servisLabel.Size = new System.Drawing.Size(96, 17);
+            this.servisLabel.TabIndex = 2;
+            this.servisLabel.Text = "Popis servisa:";
+            // 
+            // servisiDgv
+            // 
+            this.servisiDgv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.servisiDgv.AutoGenerateColumns = false;
+            this.servisiDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.servisiDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn1,
+            this.datumvrijemeDataGridViewTextBoxColumn,
+            this.opisDataGridViewTextBoxColumn,
+            this.iDserviserDataGridViewTextBoxColumn,
+            this.iDvoziloDataGridViewTextBoxColumn,
+            this.voziloDataGridViewTextBoxColumn,
+            this.stavkaservisaDataGridViewTextBoxColumn});
+            this.servisiDgv.DataSource = this.servisBindingSource;
+            this.servisiDgv.Location = new System.Drawing.Point(12, 339);
+            this.servisiDgv.Name = "servisiDgv";
+            this.servisiDgv.RowTemplate.Height = 24;
+            this.servisiDgv.Size = new System.Drawing.Size(917, 282);
+            this.servisiDgv.TabIndex = 3;
             // 
             // iDDataGridViewTextBoxColumn1
             // 
@@ -227,6 +220,14 @@
             this.stavkaservisaDataGridViewTextBoxColumn.Name = "stavkaservisaDataGridViewTextBoxColumn";
             this.stavkaservisaDataGridViewTextBoxColumn.Visible = false;
             // 
+            // servisBindingSource
+            // 
+            this.servisBindingSource.DataSource = typeof(CS.Servis);
+            // 
+            // voziloBindingSource1
+            // 
+            this.voziloBindingSource1.DataSource = typeof(CS.Vozilo);
+            // 
             // pregledVozilaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,9 +241,9 @@
             this.Text = "Pregled vozila";
             this.Load += new System.EventHandler(this.pregledVozilaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vozilaDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servisiDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servisBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

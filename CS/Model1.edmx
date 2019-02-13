@@ -55,10 +55,10 @@
             <PropertyRef Name="ID" />
             <PropertyRef Name="ID_servis" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_servis" Type="int" Nullable="false" />
-          <Property Name="ID_dio" Type="int" Nullable="false" />
-          <Property Name="ID_usluga" Type="int" Nullable="false" />
+          <Property Name="ID_dio" Type="int" />
+          <Property Name="ID_usluga" Type="int" />
           <Property Name="Kolicina" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="Usluge">
@@ -111,6 +111,22 @@
           <Property Name="God_proizvodnje" Type="date" />
           <Property Name="ID_varijante" Type="int" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CS_Management.dbo.voziloView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="voziloView">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="VIN" />
+            <PropertyRef Name="Vozilo" />
+            <PropertyRef Name="Registarska oznaka" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="VIN" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Vozilo" Type="varchar" MaxLength="152" Nullable="false" />
+          <Property Name="Registarska oznaka" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Registriran do" Type="date" />
+          <Property Name="Godina proizvodnje" Type="date" />
+        </EntityType>
         <Association Name="FK_Model_Marka">
           <End Role="Marka" Type="Self.Marka" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -154,7 +170,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Stavka servisa_Dijelovi">
-          <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="1">
+          <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="Stavka servisa" Type="Self.Stavka servisa" Multiplicity="*" />
@@ -182,7 +198,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Stavka servisa_Usluge">
-          <End Role="Usluge" Type="Self.Usluge" Multiplicity="1">
+          <End Role="Usluge" Type="Self.Usluge" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="Stavka servisa" Type="Self.Stavka servisa" Multiplicity="*" />
@@ -249,6 +265,16 @@
           <EntitySet Name="Vlasnik" EntityType="Self.Vlasnik" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vlasnistvo" EntityType="Self.Vlasnistvo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vozilo" EntityType="Self.Vozilo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="voziloView" EntityType="Self.voziloView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [voziloView].[ID] AS [ID], 
+    [voziloView].[VIN] AS [VIN], 
+    [voziloView].[Vozilo] AS [Vozilo], 
+    [voziloView].[Registarska oznaka] AS [Registarska oznaka], 
+    [voziloView].[Registriran do] AS [Registriran do], 
+    [voziloView].[Godina proizvodnje] AS [Godina proizvodnje]
+    FROM [dbo].[voziloView] AS [voziloView]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_Model_Marka" Association="Self.FK_Model_Marka">
             <End Role="Marka" EntitySet="Marka" />
             <End Role="Model" EntitySet="Model" />
@@ -349,10 +375,10 @@
             <PropertyRef Name="ID" />
             <PropertyRef Name="ID_servis" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_servis" Type="Int32" Nullable="false" />
-          <Property Name="ID_dio" Type="Int32" Nullable="false" />
-          <Property Name="ID_usluga" Type="Int32" Nullable="false" />
+          <Property Name="ID_dio" Type="Int32" />
+          <Property Name="ID_usluga" Type="Int32" />
           <Property Name="Kolicina" Type="Double" Nullable="false" />
           <NavigationProperty Name="Dijelovi" Relationship="Self.FK_Stavka_servisa_Dijelovi" FromRole="Stavka_servisa" ToRole="Dijelovi" />
           <NavigationProperty Name="Servis" Relationship="Self.FK_Stavka_servisa_Servis" FromRole="Stavka_servisa" ToRole="Servis" />
@@ -415,8 +441,22 @@
           <NavigationProperty Name="Servis" Relationship="Self.FK_Servis_Vozilo" FromRole="Vozilo" ToRole="Servis" />
           <NavigationProperty Name="Vlasnistvo" Relationship="Self.FK_Vlasnistvo_Vozilo" FromRole="Vozilo" ToRole="Vlasnistvo" />
         </EntityType>
+        <EntityType Name="voziloView">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="VIN" />
+            <PropertyRef Name="Vozilo" />
+            <PropertyRef Name="Registarska_oznaka" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Vozilo" Type="String" MaxLength="152" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Registarska_oznaka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Registriran_do" Type="DateTime" Precision="0" />
+          <Property Name="Godina_proizvodnje" Type="DateTime" Precision="0" />
+        </EntityType>
         <Association Name="FK_Stavka_servisa_Dijelovi">
-          <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="1">
+          <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="Stavka_servisa" Type="Self.Stavka_servisa" Multiplicity="*" />
@@ -500,7 +540,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Stavka_servisa_Usluge">
-          <End Role="Usluge" Type="Self.Usluge" Multiplicity="1">
+          <End Role="Usluge" Type="Self.Usluge" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="Stavka_servisa" Type="Self.Stavka_servisa" Multiplicity="*" />
@@ -553,6 +593,7 @@
           <EntitySet Name="Vlasnik" EntityType="Self.Vlasnik" />
           <EntitySet Name="Vlasnistvo" EntityType="Self.Vlasnistvo" />
           <EntitySet Name="Vozilo" EntityType="Self.Vozilo" />
+          <EntitySet Name="voziloView" EntityType="Self.voziloView" />
           <AssociationSet Name="FK_Stavka_servisa_Dijelovi" Association="Self.FK_Stavka_servisa_Dijelovi">
             <End Role="Dijelovi" EntitySet="Dijelovi" />
             <End Role="Stavka_servisa" EntitySet="Stavka_servisa" />
@@ -707,6 +748,18 @@
                 <ScalarProperty Name="Reg_do" ColumnName="Reg_do" />
                 <ScalarProperty Name="God_proizvodnje" ColumnName="God_proizvodnje" />
                 <ScalarProperty Name="ID_varijante" ColumnName="ID_varijante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="voziloView">
+            <EntityTypeMapping TypeName="CS_ManagementModel.voziloView">
+              <MappingFragment StoreEntitySet="voziloView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VIN" ColumnName="VIN" />
+                <ScalarProperty Name="Vozilo" ColumnName="Vozilo" />
+                <ScalarProperty Name="Registarska_oznaka" ColumnName="Registarska oznaka" />
+                <ScalarProperty Name="Registriran_do" ColumnName="Registriran do" />
+                <ScalarProperty Name="Godina_proizvodnje" ColumnName="Godina proizvodnje" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

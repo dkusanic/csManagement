@@ -36,5 +36,6 @@ namespace CS
         public virtual DbSet<Vlasnik> Vlasnik { get; set; }
         public virtual DbSet<Vlasnistvo> Vlasnistvo { get; set; }
         public virtual DbSet<Vozilo> Vozilo { get; set; }
+        public virtual DbSet<voziloView> voziloView { get; set; }
     }
 }

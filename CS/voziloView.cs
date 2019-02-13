@@ -12,16 +12,13 @@ namespace CS
     using System;
     using System.Collections.Generic;
     
-    public partial class Stavka_servisa
+    public partial class voziloView
     {
         public int ID { get; set; }
-        public int ID_servis { get; set; }
-        public Nullable<int> ID_dio { get; set; }
-        public Nullable<int> ID_usluga { get; set; }
-        public double Kolicina { get; set; }
-    
-        public virtual Dijelovi Dijelovi { get; set; }
-        public virtual Servis Servis { get; set; }
-        public virtual Usluge Usluge { get; set; }
+        public string VIN { get; set; }
+        public string Vozilo { get; set; }
+        public string Registarska_oznaka { get; set; }
+        public Nullable<System.DateTime> Registriran_do { get; set; }
+        public Nullable<System.DateTime> Godina_proizvodnje { get; set; }
     }
 }

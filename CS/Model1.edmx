@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CS_ManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CS_ManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Dijelovi">
           <Key>
             <PropertyRef Name="ID" />
@@ -55,11 +55,21 @@
             <PropertyRef Name="ID" />
             <PropertyRef Name="ID_servis" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_servis" Type="int" Nullable="false" />
-          <Property Name="ID_dio" Type="int" Nullable="false" />
-          <Property Name="ID_usluga" Type="int" Nullable="false" />
+          <Property Name="ID_dio" Type="int" />
+          <Property Name="ID_usluga" Type="int" />
           <Property Name="Kolicina" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="Usluge">
           <Key>
@@ -111,6 +121,22 @@
           <Property Name="God_proizvodnje" Type="date" />
           <Property Name="ID_varijante" Type="int" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CS_Management.dbo.voziloView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="voziloView">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="VIN" />
+            <PropertyRef Name="Vozilo" />
+            <PropertyRef Name="Registarska oznaka" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="VIN" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Vozilo" Type="varchar" MaxLength="152" Nullable="false" />
+          <Property Name="Registarska oznaka" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Registriran do" Type="date" />
+          <Property Name="Godina proizvodnje" Type="date" />
+        </EntityType>
         <Association Name="FK_Model_Marka">
           <End Role="Marka" Type="Self.Marka" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -154,7 +180,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Stavka servisa_Dijelovi">
-          <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="1">
+          <End Role="Dijelovi" Type="Self.Dijelovi" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="Stavka servisa" Type="Self.Stavka servisa" Multiplicity="*" />
@@ -182,7 +208,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Stavka servisa_Usluge">
-          <End Role="Usluge" Type="Self.Usluge" Multiplicity="1">
+          <End Role="Usluge" Type="Self.Usluge" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="Stavka servisa" Type="Self.Stavka servisa" Multiplicity="*" />
@@ -244,11 +270,22 @@
           <EntitySet Name="Servis" EntityType="Self.Servis" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Serviser" EntityType="Self.Serviser" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Stavka servisa" EntityType="Self.Stavka servisa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usluge" EntityType="Self.Usluge" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Varijanta" EntityType="Self.Varijanta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vlasnik" EntityType="Self.Vlasnik" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vlasnistvo" EntityType="Self.Vlasnistvo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vozilo" EntityType="Self.Vozilo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="voziloView" EntityType="Self.voziloView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [voziloView].[ID] AS [ID], 
+    [voziloView].[VIN] AS [VIN], 
+    [voziloView].[Vozilo] AS [Vozilo], 
+    [voziloView].[Registarska oznaka] AS [Registarska oznaka], 
+    [voziloView].[Registriran do] AS [Registriran do], 
+    [voziloView].[Godina proizvodnje] AS [Godina proizvodnje]
+    FROM [dbo].[voziloView] AS [voziloView]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_Model_Marka" Association="Self.FK_Model_Marka">
             <End Role="Marka" EntitySet="Marka" />
             <End Role="Model" EntitySet="Model" />
@@ -286,8 +323,7 @@
             <End Role="Vlasnistvo" EntitySet="Vlasnistvo" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CS_ManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -351,8 +387,8 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="ID_servis" Type="Int32" Nullable="false" />
-          <Property Name="ID_dio" Type="Int32" Nullable="false" />
-          <Property Name="ID_usluga" Type="Int32" Nullable="false" />
+          <Property Name="ID_dio" Type="Int32" />
+          <Property Name="ID_usluga" Type="Int32" />
           <Property Name="Kolicina" Type="Double" Nullable="false" />
           <NavigationProperty Name="Dijelovi" Relationship="Self.FK_Stavka_servisa_Dijelovi" FromRole="Stavka_servisa" ToRole="Dijelovi" />
           <NavigationProperty Name="Servis" Relationship="Self.FK_Stavka_servisa_Servis" FromRole="Stavka_servisa" ToRole="Servis" />
@@ -589,7 +625,33 @@
             <End Role="Vozilo" EntitySet="Vozilo" />
             <End Role="Vlasnistvo" EntitySet="Vlasnistvo" />
           </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="CS_ManagementModel.sysdiagrams" />
+          <EntitySet Name="voziloView" EntityType="CS_ManagementModel.voziloView" />
         </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="voziloView">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="VIN" />
+            <PropertyRef Name="Vozilo" />
+            <PropertyRef Name="Registarska_oznaka" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="VIN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Vozilo" Type="String" Nullable="false" MaxLength="152" FixedLength="false" Unicode="false" />
+          <Property Name="Registarska_oznaka" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Registriran_do" Type="DateTime" Precision="0" />
+          <Property Name="Godina_proizvodnje" Type="DateTime" Precision="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -707,6 +769,29 @@
                 <ScalarProperty Name="Reg_do" ColumnName="Reg_do" />
                 <ScalarProperty Name="God_proizvodnje" ColumnName="God_proizvodnje" />
                 <ScalarProperty Name="ID_varijante" ColumnName="ID_varijante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="CS_ManagementModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="voziloView">
+            <EntityTypeMapping TypeName="CS_ManagementModel.voziloView">
+              <MappingFragment StoreEntitySet="voziloView">
+                <ScalarProperty Name="Godina_proizvodnje" ColumnName="Godina proizvodnje" />
+                <ScalarProperty Name="Registriran_do" ColumnName="Registriran do" />
+                <ScalarProperty Name="Registarska_oznaka" ColumnName="Registarska oznaka" />
+                <ScalarProperty Name="Vozilo" ColumnName="Vozilo" />
+                <ScalarProperty Name="VIN" ColumnName="VIN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

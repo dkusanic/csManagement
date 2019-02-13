@@ -25,6 +25,8 @@
         <AssociationConnector Association="CS_ManagementModel.FK_Stavka_servisa_Usluge" ManuallyRouted="false" />
         <AssociationConnector Association="CS_ManagementModel.FK_Vlasnistvo_Vlasnik" ManuallyRouted="false" />
         <AssociationConnector Association="CS_ManagementModel.FK_Vlasnistvo_Vozilo" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CS_ManagementModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CS_ManagementModel.voziloView" Width="1.5" PointX="2.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

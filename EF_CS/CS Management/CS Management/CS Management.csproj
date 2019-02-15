@@ -55,6 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CS_ManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CS_ManagementModel.cs" />
     <Compile Include="Dijelovi.cs" />
     <Compile Include="loginForm.cs">
@@ -71,6 +76,12 @@
     </Compile>
     <Compile Include="Marka.cs" />
     <Compile Include="Model.cs" />
+    <Compile Include="pregledVozilaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pregledVozilaForm.Designer.cs">
+      <DependentUpon>pregledVozilaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servis.cs" />
@@ -88,6 +99,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pregledVozilaForm.resx">
+      <DependentUpon>pregledVozilaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -97,6 +111,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CS_ManagementDataSet.xsc">
+      <DependentUpon>CS_ManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet.xss">
+      <DependentUpon>CS_ManagementDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

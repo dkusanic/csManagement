@@ -41,15 +41,15 @@
             this.tsmiModel = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiVarijanta = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiServis = new System.Windows.Forms.ToolStripMenuItem();
-            this.vlasniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiServiseri = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUnosServisa = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPregledServisa = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBazaS = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDijelovi = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUsluge = new System.Windows.Forms.ToolStripMenuItem();
+            this.vlasniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPregledVlasnika = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUnosVlasnika = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiServiseri = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPregledServisera = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIzbornik.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +98,7 @@
             // 
             this.tsmiPregledVozila.Name = "tsmiPregledVozila";
             resources.ApplyResources(this.tsmiPregledVozila, "tsmiPregledVozila");
+            this.tsmiPregledVozila.Click += new System.EventHandler(this.tsmiPregledVozila_Click);
             // 
             // tsmiUnosVozila
             // 
@@ -137,21 +138,6 @@
             this.tsmiServis.Name = "tsmiServis";
             resources.ApplyResources(this.tsmiServis, "tsmiServis");
             // 
-            // vlasniciToolStripMenuItem
-            // 
-            this.vlasniciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiPregledVlasnika,
-            this.tsmiUnosVlasnika});
-            this.vlasniciToolStripMenuItem.Name = "vlasniciToolStripMenuItem";
-            resources.ApplyResources(this.vlasniciToolStripMenuItem, "vlasniciToolStripMenuItem");
-            // 
-            // tsmiServiseri
-            // 
-            this.tsmiServiseri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiPregledServisera});
-            this.tsmiServiseri.Name = "tsmiServiseri";
-            resources.ApplyResources(this.tsmiServiseri, "tsmiServiseri");
-            // 
             // tsmiUnosServisa
             // 
             this.tsmiUnosServisa.Name = "tsmiUnosServisa";
@@ -180,6 +166,14 @@
             this.tsmiUsluge.Name = "tsmiUsluge";
             resources.ApplyResources(this.tsmiUsluge, "tsmiUsluge");
             // 
+            // vlasniciToolStripMenuItem
+            // 
+            this.vlasniciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiPregledVlasnika,
+            this.tsmiUnosVlasnika});
+            this.vlasniciToolStripMenuItem.Name = "vlasniciToolStripMenuItem";
+            resources.ApplyResources(this.vlasniciToolStripMenuItem, "vlasniciToolStripMenuItem");
+            // 
             // tsmiPregledVlasnika
             // 
             this.tsmiPregledVlasnika.Name = "tsmiPregledVlasnika";
@@ -189,6 +183,13 @@
             // 
             this.tsmiUnosVlasnika.Name = "tsmiUnosVlasnika";
             resources.ApplyResources(this.tsmiUnosVlasnika, "tsmiUnosVlasnika");
+            // 
+            // tsmiServiseri
+            // 
+            this.tsmiServiseri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiPregledServisera});
+            this.tsmiServiseri.Name = "tsmiServiseri";
+            resources.ApplyResources(this.tsmiServiseri, "tsmiServiseri");
             // 
             // tsmiPregledServisera
             // 
@@ -200,6 +201,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.menuIzbornik);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuIzbornik;
             this.Name = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

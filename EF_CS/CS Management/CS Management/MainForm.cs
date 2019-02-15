@@ -51,10 +51,22 @@ namespace CS_Management
         {
             this.Close();
         }
-
+        /// <summary>
+        /// Rukuje klikom u izborniku na Aplikacija-Zaključaj
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsmiZakljucaj_Click(object sender, EventArgs e)
         {
             MainForm_Load(this, new EventArgs());
+        }
+
+        private void tsmiPregledVozila_Click(object sender, EventArgs e)
+        {
+            pregledVozilaForm pregledVozila = new pregledVozilaForm();
+            pregledVozila.WindowState = FormWindowState.Maximized;
+            pregledVozila.MdiParent = this;
+            pregledVozila.Show();
         }
     }
 }

@@ -118,6 +118,7 @@
             // 
             this.tsmiMarka.Name = "tsmiMarka";
             resources.ApplyResources(this.tsmiMarka, "tsmiMarka");
+            this.tsmiMarka.Click += new System.EventHandler(this.tsmiMarka_Click);
             // 
             // tsmiModel
             // 

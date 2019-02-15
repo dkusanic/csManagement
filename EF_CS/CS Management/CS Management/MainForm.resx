@@ -121,6 +121,132 @@
     <value>122, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tsmiZakljucaj.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="tsmiZakljucaj.Text" xml:space="preserve">
+    <value>Zaključaj</value>
+  </data>
+  <data name="tsmiIzlaz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="tsmiIzlaz.Text" xml:space="preserve">
+    <value>Izlaz</value>
+  </data>
+  <data name="tsmiAplikacija.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
+  </data>
+  <data name="tsmiAplikacija.Text" xml:space="preserve">
+    <value>Aplikacija</value>
+  </data>
+  <data name="tsmiPregledVozila.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="tsmiPregledVozila.Text" xml:space="preserve">
+    <value>Pregled vozila</value>
+  </data>
+  <data name="tsmiUnosVozila.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="tsmiUnosVozila.Text" xml:space="preserve">
+    <value>Unos vozila</value>
+  </data>
+  <data name="tsmiMarka.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="tsmiMarka.Text" xml:space="preserve">
+    <value>Marka</value>
+  </data>
+  <data name="tsmiModel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="tsmiModel.Text" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="tsmiVarijanta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="tsmiVarijanta.Text" xml:space="preserve">
+    <value>Varijanta</value>
+  </data>
+  <data name="tsmiBazaV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="tsmiBazaV.Text" xml:space="preserve">
+    <value>Baza</value>
+  </data>
+  <data name="tsmiVozila.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="tsmiVozila.Text" xml:space="preserve">
+    <value>Vozila</value>
+  </data>
+  <data name="tsmiUnosServisa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="tsmiUnosServisa.Text" xml:space="preserve">
+    <value>Unos servisa</value>
+  </data>
+  <data name="tsmiPregledServisa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="tsmiPregledServisa.Text" xml:space="preserve">
+    <value>Pregled servisa</value>
+  </data>
+  <data name="tsmiDijelovi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 22</value>
+  </data>
+  <data name="tsmiDijelovi.Text" xml:space="preserve">
+    <value>Dijelovi</value>
+  </data>
+  <data name="tsmiUsluge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 22</value>
+  </data>
+  <data name="tsmiUsluge.Text" xml:space="preserve">
+    <value>Usluge</value>
+  </data>
+  <data name="tsmiBazaS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="tsmiBazaS.Text" xml:space="preserve">
+    <value>Baza</value>
+  </data>
+  <data name="tsmiServis.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="tsmiServis.Text" xml:space="preserve">
+    <value>Servis</value>
+  </data>
+  <data name="tsmiPregledVlasnika.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
+  </data>
+  <data name="tsmiPregledVlasnika.Text" xml:space="preserve">
+    <value>Pregled vlasnika</value>
+  </data>
+  <data name="tsmiUnosVlasnika.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
+  </data>
+  <data name="tsmiUnosVlasnika.Text" xml:space="preserve">
+    <value>Unos vlasnika</value>
+  </data>
+  <data name="vlasniciToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 20</value>
+  </data>
+  <data name="vlasniciToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vlasnici</value>
+  </data>
+  <data name="tsmiPregledServisera.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 22</value>
+  </data>
+  <data name="tsmiPregledServisera.Text" xml:space="preserve">
+    <value>Pregled servisera</value>
+  </data>
+  <data name="tsmiServiseri.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
+  </data>
+  <data name="tsmiServiseri.Text" xml:space="preserve">
+    <value>Serviseri</value>
+  </data>
   <data name="menuIzbornik.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -145,132 +271,6 @@
   </data>
   <data name="&gt;&gt;menuIzbornik.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="tsmiAplikacija.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 20</value>
-  </data>
-  <data name="tsmiAplikacija.Text" xml:space="preserve">
-    <value>Aplikacija</value>
-  </data>
-  <data name="tsmiZakljucaj.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="tsmiZakljucaj.Text" xml:space="preserve">
-    <value>Zaključaj</value>
-  </data>
-  <data name="tsmiIzlaz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="tsmiIzlaz.Text" xml:space="preserve">
-    <value>Izlaz</value>
-  </data>
-  <data name="tsmiVozila.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="tsmiVozila.Text" xml:space="preserve">
-    <value>Vozila</value>
-  </data>
-  <data name="tsmiPregledVozila.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="tsmiPregledVozila.Text" xml:space="preserve">
-    <value>Pregled vozila</value>
-  </data>
-  <data name="tsmiUnosVozila.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="tsmiUnosVozila.Text" xml:space="preserve">
-    <value>Unos vozila</value>
-  </data>
-  <data name="tsmiBazaV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="tsmiBazaV.Text" xml:space="preserve">
-    <value>Baza</value>
-  </data>
-  <data name="tsmiMarka.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
-  </data>
-  <data name="tsmiMarka.Text" xml:space="preserve">
-    <value>Marka</value>
-  </data>
-  <data name="tsmiModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
-  </data>
-  <data name="tsmiModel.Text" xml:space="preserve">
-    <value>Model</value>
-  </data>
-  <data name="tsmiVarijanta.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
-  </data>
-  <data name="tsmiVarijanta.Text" xml:space="preserve">
-    <value>Varijanta</value>
-  </data>
-  <data name="tsmiServis.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
-  </data>
-  <data name="tsmiServis.Text" xml:space="preserve">
-    <value>Servis</value>
-  </data>
-  <data name="tsmiUnosServisa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="tsmiUnosServisa.Text" xml:space="preserve">
-    <value>Unos servisa</value>
-  </data>
-  <data name="tsmiPregledServisa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="tsmiPregledServisa.Text" xml:space="preserve">
-    <value>Pregled servisa</value>
-  </data>
-  <data name="tsmiBazaS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="tsmiBazaS.Text" xml:space="preserve">
-    <value>Baza</value>
-  </data>
-  <data name="tsmiDijelovi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 22</value>
-  </data>
-  <data name="tsmiDijelovi.Text" xml:space="preserve">
-    <value>Dijelovi</value>
-  </data>
-  <data name="tsmiUsluge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 22</value>
-  </data>
-  <data name="tsmiUsluge.Text" xml:space="preserve">
-    <value>Usluge</value>
-  </data>
-  <data name="vlasniciToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 20</value>
-  </data>
-  <data name="vlasniciToolStripMenuItem.Text" xml:space="preserve">
-    <value>Vlasnici</value>
-  </data>
-  <data name="tsmiPregledVlasnika.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 22</value>
-  </data>
-  <data name="tsmiPregledVlasnika.Text" xml:space="preserve">
-    <value>Pregled vlasnika</value>
-  </data>
-  <data name="tsmiUnosVlasnika.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 22</value>
-  </data>
-  <data name="tsmiUnosVlasnika.Text" xml:space="preserve">
-    <value>Unos vlasnika</value>
-  </data>
-  <data name="tsmiServiseri.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 20</value>
-  </data>
-  <data name="tsmiServiseri.Text" xml:space="preserve">
-    <value>Serviseri</value>
-  </data>
-  <data name="tsmiPregledServisera.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 22</value>
-  </data>
-  <data name="tsmiPregledServisera.Text" xml:space="preserve">
-    <value>Pregled servisera</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

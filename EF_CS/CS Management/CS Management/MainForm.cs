@@ -68,5 +68,13 @@ namespace CS_Management
             pregledVozila.MdiParent = this;
             pregledVozila.Show();
         }
+
+        private void tsmiMarka_Click(object sender, EventArgs e)
+        {
+            markaForm Marke = new markaForm();
+            Marke.WindowState = FormWindowState.Maximized;
+            Marke.MdiParent = this;
+            Marke.Show();
+        }
     }
 }

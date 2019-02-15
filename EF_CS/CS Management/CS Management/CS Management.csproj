@@ -65,6 +65,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CS_ManagementDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CS_ManagementDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CS_ManagementModel.cs" />
     <Compile Include="Dijelovi.cs" />
     <Compile Include="loginForm.cs">
@@ -80,6 +85,12 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Marka.cs" />
+    <Compile Include="markaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="markaForm.Designer.cs">
+      <DependentUpon>markaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model.cs" />
     <Compile Include="pregledVozilaForm.cs">
       <SubType>Form</SubType>
@@ -103,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="markaForm.resx">
+      <DependentUpon>markaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pregledVozilaForm.resx">
       <DependentUpon>pregledVozilaForm.cs</DependentUpon>
@@ -137,6 +151,17 @@
     </None>
     <None Include="CS_ManagementDataSet1.xss">
       <DependentUpon>CS_ManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet2.xsc">
+      <DependentUpon>CS_ManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet2.xss">
+      <DependentUpon>CS_ManagementDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(csForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aplikacijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.servisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unosVozilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unosServisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pregledServisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bazaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.markaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.varijantaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.servisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unosServisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledServisaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bazaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dijeloviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.serviseriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pregledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vlasniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviseriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,12 @@
             this.aplikacijaToolStripMenuItem.Name = "aplikacijaToolStripMenuItem";
             resources.ApplyResources(this.aplikacijaToolStripMenuItem, "aplikacijaToolStripMenuItem");
             // 
+            // izlazToolStripMenuItem
+            // 
+            this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
+            resources.ApplyResources(this.izlazToolStripMenuItem, "izlazToolStripMenuItem");
+            this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
+            // 
             // vozilaToolStripMenuItem
             // 
             this.vozilaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -79,21 +85,6 @@
             this.bazaToolStripMenuItem});
             this.vozilaToolStripMenuItem.Name = "vozilaToolStripMenuItem";
             resources.ApplyResources(this.vozilaToolStripMenuItem, "vozilaToolStripMenuItem");
-            // 
-            // servisToolStripMenuItem
-            // 
-            this.servisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unosServisaToolStripMenuItem,
-            this.pregledServisaToolStripMenuItem,
-            this.bazaToolStripMenuItem1});
-            this.servisToolStripMenuItem.Name = "servisToolStripMenuItem";
-            resources.ApplyResources(this.servisToolStripMenuItem, "servisToolStripMenuItem");
-            // 
-            // izlazToolStripMenuItem
-            // 
-            this.izlazToolStripMenuItem.Name = "izlazToolStripMenuItem";
-            resources.ApplyResources(this.izlazToolStripMenuItem, "izlazToolStripMenuItem");
-            this.izlazToolStripMenuItem.Click += new System.EventHandler(this.izlazToolStripMenuItem_Click);
             // 
             // pregledVozilaToolStripMenuItem
             // 
@@ -105,16 +96,7 @@
             // 
             this.unosVozilaToolStripMenuItem.Name = "unosVozilaToolStripMenuItem";
             resources.ApplyResources(this.unosVozilaToolStripMenuItem, "unosVozilaToolStripMenuItem");
-            // 
-            // unosServisaToolStripMenuItem
-            // 
-            this.unosServisaToolStripMenuItem.Name = "unosServisaToolStripMenuItem";
-            resources.ApplyResources(this.unosServisaToolStripMenuItem, "unosServisaToolStripMenuItem");
-            // 
-            // pregledServisaToolStripMenuItem
-            // 
-            this.pregledServisaToolStripMenuItem.Name = "pregledServisaToolStripMenuItem";
-            resources.ApplyResources(this.pregledServisaToolStripMenuItem, "pregledServisaToolStripMenuItem");
+            this.unosVozilaToolStripMenuItem.Click += new System.EventHandler(this.unosVozilaToolStripMenuItem_Click);
             // 
             // bazaToolStripMenuItem
             // 
@@ -140,6 +122,25 @@
             this.varijantaToolStripMenuItem.Name = "varijantaToolStripMenuItem";
             resources.ApplyResources(this.varijantaToolStripMenuItem, "varijantaToolStripMenuItem");
             // 
+            // servisToolStripMenuItem
+            // 
+            this.servisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.unosServisaToolStripMenuItem,
+            this.pregledServisaToolStripMenuItem,
+            this.bazaToolStripMenuItem1});
+            this.servisToolStripMenuItem.Name = "servisToolStripMenuItem";
+            resources.ApplyResources(this.servisToolStripMenuItem, "servisToolStripMenuItem");
+            // 
+            // unosServisaToolStripMenuItem
+            // 
+            this.unosServisaToolStripMenuItem.Name = "unosServisaToolStripMenuItem";
+            resources.ApplyResources(this.unosServisaToolStripMenuItem, "unosServisaToolStripMenuItem");
+            // 
+            // pregledServisaToolStripMenuItem
+            // 
+            this.pregledServisaToolStripMenuItem.Name = "pregledServisaToolStripMenuItem";
+            resources.ApplyResources(this.pregledServisaToolStripMenuItem, "pregledServisaToolStripMenuItem");
+            // 
             // bazaToolStripMenuItem1
             // 
             this.bazaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -158,18 +159,6 @@
             this.uslugeToolStripMenuItem.Name = "uslugeToolStripMenuItem";
             resources.ApplyResources(this.uslugeToolStripMenuItem, "uslugeToolStripMenuItem");
             // 
-            // serviseriToolStripMenuItem
-            // 
-            this.serviseriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pregledToolStripMenuItem});
-            this.serviseriToolStripMenuItem.Name = "serviseriToolStripMenuItem";
-            resources.ApplyResources(this.serviseriToolStripMenuItem, "serviseriToolStripMenuItem");
-            // 
-            // pregledToolStripMenuItem
-            // 
-            this.pregledToolStripMenuItem.Name = "pregledToolStripMenuItem";
-            resources.ApplyResources(this.pregledToolStripMenuItem, "pregledToolStripMenuItem");
-            // 
             // vlasniciToolStripMenuItem
             // 
             this.vlasniciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -181,6 +170,18 @@
             // 
             this.pregledToolStripMenuItem1.Name = "pregledToolStripMenuItem1";
             resources.ApplyResources(this.pregledToolStripMenuItem1, "pregledToolStripMenuItem1");
+            // 
+            // serviseriToolStripMenuItem
+            // 
+            this.serviseriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pregledToolStripMenuItem});
+            this.serviseriToolStripMenuItem.Name = "serviseriToolStripMenuItem";
+            resources.ApplyResources(this.serviseriToolStripMenuItem, "serviseriToolStripMenuItem");
+            // 
+            // pregledToolStripMenuItem
+            // 
+            this.pregledToolStripMenuItem.Name = "pregledToolStripMenuItem";
+            resources.ApplyResources(this.pregledToolStripMenuItem, "pregledToolStripMenuItem");
             // 
             // csForm
             // 

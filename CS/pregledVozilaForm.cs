@@ -52,16 +52,6 @@ namespace CS
                 listaServisa = new BindingList<Servis>(db.Servis.ToList());
             }
             List<Servis> servisiVozila = new List<Servis>();
-            foreach(Servis s in listaServisa)
-            {
-                for (int i=0; i<listaVozila.Count; i++)
-                {
-                    if (s.ID_vozilo == listaVozila[i].ID)
-                        servisiVozila.Add(s);
-                }
-                
-            }
-            servisBindingSource.DataSource = servisiVozila;
         }
         private void pregledServisa(int index)
         {

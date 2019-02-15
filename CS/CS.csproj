@@ -74,6 +74,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CS_ManagementDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CS_ManagementDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dijelovi.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -123,6 +153,12 @@
     <Compile Include="Stavka_servisa.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="unosVozilaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="unosVozilaForm.Designer.cs">
+      <DependentUpon>unosVozilaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usluge.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -162,6 +198,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="unosVozilaForm.resx">
+      <DependentUpon>unosVozilaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -187,6 +226,72 @@
     </None>
     <None Include="CS_ManagementDataSet1.xss">
       <DependentUpon>CS_ManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet2.xsc">
+      <DependentUpon>CS_ManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet2.xss">
+      <DependentUpon>CS_ManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet3.xsc">
+      <DependentUpon>CS_ManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet3.xss">
+      <DependentUpon>CS_ManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet4.xsc">
+      <DependentUpon>CS_ManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet4.xss">
+      <DependentUpon>CS_ManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet5.xsc">
+      <DependentUpon>CS_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet5.xss">
+      <DependentUpon>CS_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet6.xsc">
+      <DependentUpon>CS_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet6.xss">
+      <DependentUpon>CS_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet7.xsc">
+      <DependentUpon>CS_ManagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet7.xss">
+      <DependentUpon>CS_ManagementDataSet7.xsd</DependentUpon>
     </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>

@@ -55,5 +55,13 @@ namespace CS
             pregledVozila.MdiParent = this;
             pregledVozila.Show();
         }
+
+        private void unosVozilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unosVozilaForm unosVozila = new unosVozilaForm();
+            unosVozila.WindowState = FormWindowState.Maximized;
+            unosVozila.MdiParent = this;
+            unosVozila.Show();
+        }
     }
 }

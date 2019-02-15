@@ -21,18 +21,31 @@ namespace CS_Management
 
         private void pregledVozilaForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cS_ManagementDataSet1.Servis' table. You can move, or remove it, as needed.
+            this.servisTableAdapter.Fill(this.cS_ManagementDataSet1.Servis);
             // TODO: This line of code loads data into the 'cS_ManagementDataSet.voziloView' table. You can move, or remove it, as needed.
             this.voziloViewTableAdapter.Fill(this.cS_ManagementDataSet.voziloView);
-
         }
-        private void pregledVozila()
+        private void pregledServisa(int index)
         {
-            listaVozila = null;
-            using (var context = new CS_ManagementModel())
+            listaServisa = null;
+            using (var db = new CS_ManagementModel())
             {
-                listaVozila = new BindingList<voziloView>(context.voziloView.ToList());
+                listaServisa = new BindingList<Servis>(db.Servis.ToList());
             }
-            voziloViewBindingSource.DataSource = listaVozila;
+            List<Servis> servisiVozila = new List<Servis>();
+            foreach (Servis s in listaServisa)
+            {
+                if (s.ID_vozilo == index)
+                    servisiVozila.Add(s);
+
+            }
+            servisBindingSource.DataSource = servisiVozila;
+        }
+
+        private void dgvPregledVozila_SelectionChanged(object sender, EventArgs e)
+        {
+            pregledServisa(dgvPregledVozila.CurrentRow.Index + 1);
         }
     }
 }

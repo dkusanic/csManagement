@@ -60,6 +60,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CS_ManagementDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CS_ManagementDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CS_ManagementModel.cs" />
     <Compile Include="Dijelovi.cs" />
     <Compile Include="loginForm.cs">
@@ -121,6 +126,17 @@
     </None>
     <None Include="CS_ManagementDataSet.xss">
       <DependentUpon>CS_ManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet1.xsc">
+      <DependentUpon>CS_ManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet1.xss">
+      <DependentUpon>CS_ManagementDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

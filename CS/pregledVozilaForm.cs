@@ -30,8 +30,8 @@ namespace CS
             this.voziloViewTableAdapter1.Fill(this.cS_ManagementDataSet1.voziloView);
             // TODO: This line of code loads data into the 'cS_ManagementDataSet.voziloView' table. You can move, or remove it, as needed.
             this.voziloViewTableAdapter.Fill(this.cS_ManagementDataSet.voziloView);
-            pregledVozila();
-            pregledServisa();
+            //pregledVozila();
+            //pregledServisa();
         }
 
         private void pregledVozila()
@@ -44,7 +44,7 @@ namespace CS
             voziloBindingSource.DataSource = listaVozila;
         }
 
-        private void pregledServisa()
+        /*private void pregledServisa()
         {
             listaServisa = null;
             using (var db = new CS_ManagementEntities())
@@ -62,7 +62,7 @@ namespace CS
                 
             }
             servisBindingSource.DataSource = servisiVozila;
-        }
+        }*/
         private void pregledServisa(int index)
         {
             listaServisa = null;

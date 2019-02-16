@@ -65,6 +65,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CS_ManagementDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CS_ManagementDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet10.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CS_ManagementDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,8 +95,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CS_ManagementDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CS_ManagementDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CS_ManagementModel.cs" />
     <Compile Include="Dijelovi.cs" />
+    <Compile Include="dodajUrediVoziloForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dodajUrediVoziloForm.Designer.cs">
+      <DependentUpon>dodajUrediVoziloForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +155,9 @@
     <Compile Include="Vlasnistvo.cs" />
     <Compile Include="Vozilo.cs" />
     <Compile Include="voziloView.cs" />
+    <EmbeddedResource Include="dodajUrediVoziloForm.resx">
+      <DependentUpon>dodajUrediVoziloForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +200,17 @@
     </None>
     <None Include="CS_ManagementDataSet1.xss">
       <DependentUpon>CS_ManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet10.xsc">
+      <DependentUpon>CS_ManagementDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet10.xss">
+      <DependentUpon>CS_ManagementDataSet10.xsd</DependentUpon>
     </None>
     <None Include="CS_ManagementDataSet2.xsc">
       <DependentUpon>CS_ManagementDataSet2.xsd</DependentUpon>
@@ -226,6 +266,39 @@
     </None>
     <None Include="CS_ManagementDataSet6.xss">
       <DependentUpon>CS_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet7.xsc">
+      <DependentUpon>CS_ManagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet7.xss">
+      <DependentUpon>CS_ManagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet8.xsc">
+      <DependentUpon>CS_ManagementDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet8.xss">
+      <DependentUpon>CS_ManagementDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet9.xsc">
+      <DependentUpon>CS_ManagementDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet9.xss">
+      <DependentUpon>CS_ManagementDataSet9.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -39,5 +39,6 @@ namespace CS_Management
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Vlasnistvo> Vlasnistvo { get; set; }
+        
     }
 }

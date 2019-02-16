@@ -22,5 +22,35 @@ namespace CS_Management
         public int ID_modela { get; set; }
 
         public virtual Model Model { get; set; }
+        public override string  ToString()
+        {
+            return (Oznaka_motora + " " + konvertMjenjac() + " " + konvertKaroserija());
+        }
+        public string konvertMjenjac()
+        {
+            switch (Mjenjač)
+            {
+                case 1:
+                    return "ručni";
+                    
+                case 2:
+                    return "automatski";
+                    
+            }
+            return "";
+        }
+        public string konvertKaroserija()
+        {
+            switch (Karoserija)
+            {
+                case 1:
+                    return "limuzina";
+                case 2:
+                    return "karavan";
+                case 3:
+                    return "hatchback";
+            }
+            return "";
+        }
     }
 }

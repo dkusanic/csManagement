@@ -51,5 +51,26 @@ namespace CS_Management
         {
             pregledServisa(dgvPregledVozila.CurrentRow.Index + 1);
         }
+
+        private void btnDodajVozilo_Click(object sender, EventArgs e)
+        {
+            dodajUrediVoziloForm dodajVozilo = new dodajUrediVoziloForm();
+            dodajVozilo.WindowState = FormWindowState.Maximized;
+            dodajVozilo.MdiParent = this.MdiParent;
+            dodajVozilo.Show();
+        }
+
+        private void btnUrediVozilo_Click(object sender, EventArgs e)
+        {
+            int voziloId = 0;
+            if (dgvPregledVozila.CurrentRow != null)
+            {
+                voziloId = (int)dgvPregledVozila.CurrentRow.Cells[0].Value;
+            }
+            dodajUrediVoziloForm urediVozilo = new dodajUrediVoziloForm(voziloId);
+            urediVozilo.WindowState = FormWindowState.Maximized;
+            urediVozilo.MdiParent = this.MdiParent;
+            urediVozilo.Show();
+        }
     }
 }

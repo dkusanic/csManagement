@@ -51,6 +51,8 @@
             this.cS_ManagementDataSet1 = new CS_Management.CS_ManagementDataSet1();
             this.voziloViewTableAdapter = new CS_Management.CS_ManagementDataSetTableAdapters.voziloViewTableAdapter();
             this.servisTableAdapter = new CS_Management.CS_ManagementDataSet1TableAdapters.ServisTableAdapter();
+            this.btnDodajVozilo = new System.Windows.Forms.Button();
+            this.btnUrediVozilo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPregledVozila)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cS_ManagementDataSet)).BeginInit();
@@ -213,15 +215,38 @@
             // 
             this.servisTableAdapter.ClearBeforeFill = true;
             // 
+            // btnDodajVozilo
+            // 
+            this.btnDodajVozilo.Location = new System.Drawing.Point(911, 29);
+            this.btnDodajVozilo.Name = "btnDodajVozilo";
+            this.btnDodajVozilo.Size = new System.Drawing.Size(131, 47);
+            this.btnDodajVozilo.TabIndex = 4;
+            this.btnDodajVozilo.Text = "Dodaj vozilo";
+            this.btnDodajVozilo.UseVisualStyleBackColor = true;
+            this.btnDodajVozilo.Click += new System.EventHandler(this.btnDodajVozilo_Click);
+            // 
+            // btnUrediVozilo
+            // 
+            this.btnUrediVozilo.Location = new System.Drawing.Point(911, 82);
+            this.btnUrediVozilo.Name = "btnUrediVozilo";
+            this.btnUrediVozilo.Size = new System.Drawing.Size(131, 47);
+            this.btnUrediVozilo.TabIndex = 5;
+            this.btnUrediVozilo.Text = "Uredi odabrano vozilo";
+            this.btnUrediVozilo.UseVisualStyleBackColor = true;
+            this.btnUrediVozilo.Click += new System.EventHandler(this.btnUrediVozilo_Click);
+            // 
             // pregledVozilaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 598);
+            this.Controls.Add(this.btnUrediVozilo);
+            this.Controls.Add(this.btnDodajVozilo);
             this.Controls.Add(this.dgvPopisServisa);
             this.Controls.Add(this.lblPregledServisa);
             this.Controls.Add(this.dgvPregledVozila);
             this.Controls.Add(this.lblPopisVozila);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "pregledVozilaForm";
             this.Text = "Pregled vozila";
@@ -260,5 +285,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDserviserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDvoziloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnDodajVozilo;
+        private System.Windows.Forms.Button btnUrediVozilo;
     }
 }

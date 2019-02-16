@@ -10,12 +10,8 @@ namespace CS_Management
     public partial class Stavka_servisa
     {
         [Key]
-        [Column(Order = 0)]
         public int ID { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_servis { get; set; }
 
         public int? ID_dio { get; set; }

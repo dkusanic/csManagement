@@ -12,9 +12,11 @@ namespace CS_Management
 {
     public partial class loginForm : Form
     {
+        Serviser serviser;
         public bool admin = false;
-        public loginForm()
+        public loginForm(Serviser prijavljeniServiser)
         {
+            serviser = prijavljeniServiser;
             InitializeComponent();
         }
 
@@ -42,6 +44,7 @@ namespace CS_Management
             using (var context = new CS_ManagementModel())
             {
                 var prijavljeniServiser = context.Serviser.Where(s => s.Kor_ime == txtKorime.Text).FirstOrDefault<Serviser>();
+                               
                 if (prijavljeniServiser != null)
                 {
                     if (prijavljeniServiser.Admin == true)
@@ -53,6 +56,14 @@ namespace CS_Management
                 }
                 else
                     MessageBox.Show("Pogrešno korisničko ime i/ili lozinka!\nPokušajte ponovno!");
+
+                serviser.ID = prijavljeniServiser.ID;
+                serviser.Ime = prijavljeniServiser.Ime;
+                serviser.Kor_ime = prijavljeniServiser.Kor_ime;
+                serviser.Lozinka = prijavljeniServiser.Lozinka;
+                serviser.Prezime = prijavljeniServiser.Prezime;
+                serviser.Servis = prijavljeniServiser.Servis;
+                serviser.Admin = prijavljeniServiser.Admin;
             }
         }
     }

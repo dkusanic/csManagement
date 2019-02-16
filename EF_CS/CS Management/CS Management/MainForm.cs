@@ -12,6 +12,8 @@ namespace CS_Management
 {
     public partial class MainForm : Form
     {
+        Serviser prijavljeniServiser = new Serviser();
+
         public MainForm()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace CS_Management
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            loginForm login = new loginForm();
+            loginForm login = new loginForm(prijavljeniServiser);
             login.ShowDialog();
             provjeraAdmin(login.admin);
         }
@@ -63,7 +65,7 @@ namespace CS_Management
 
         private void tsmiPregledVozila_Click(object sender, EventArgs e)
         {
-            pregledVozilaForm pregledVozila = new pregledVozilaForm();
+            pregledVozilaForm pregledVozila = new pregledVozilaForm(prijavljeniServiser);
             pregledVozila.WindowState = FormWindowState.Maximized;
             pregledVozila.MdiParent = this;
             pregledVozila.Show();

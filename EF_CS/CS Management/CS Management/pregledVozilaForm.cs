@@ -14,8 +14,10 @@ namespace CS_Management
     {
         BindingList<voziloView> listaVozila = new BindingList<voziloView>();
         BindingList<Servis> listaServisa = new BindingList<Servis>();
-        public pregledVozilaForm()
+        Serviser serviser;
+        public pregledVozilaForm(Serviser prijavljeniServiser)
         {
+            this.serviser = prijavljeniServiser;
             InitializeComponent();
         }
 
@@ -49,7 +51,7 @@ namespace CS_Management
 
         private void dgvPregledVozila_SelectionChanged(object sender, EventArgs e)
         {
-            pregledServisa(dgvPregledVozila.CurrentRow.Index + 1);
+            pregledServisa((int)dgvPregledVozila.CurrentRow.Cells[0].Value);
         }
 
         private void btnDodajVozilo_Click(object sender, EventArgs e)
@@ -63,14 +65,34 @@ namespace CS_Management
         private void btnUrediVozilo_Click(object sender, EventArgs e)
         {
             int voziloId = 0;
+
             if (dgvPregledVozila.CurrentRow != null)
             {
                 voziloId = (int)dgvPregledVozila.CurrentRow.Cells[0].Value;
             }
+
             dodajUrediVoziloForm urediVozilo = new dodajUrediVoziloForm(voziloId);
             urediVozilo.WindowState = FormWindowState.Maximized;
             urediVozilo.MdiParent = this.MdiParent;
             urediVozilo.Show();
+        }
+
+        private void btnDodajServis_Click(object sender, EventArgs e)
+        {
+            int idVozila = (int)dgvPregledVozila.CurrentRow.Cells[0].Value;
+            dodajUrediServisForm dodajServis = new dodajUrediServisForm(idVozila, serviser.ID);
+            dodajServis.WindowState = FormWindowState.Maximized;
+            dodajServis.MdiParent = this.MdiParent;
+            dodajServis.Show();
+        }
+
+        private void btnUrediServis_Click(object sender, EventArgs e)
+        {
+            int idServisa = (int)dgvPopisServisa.CurrentRow.Cells[0].Value;
+            dodajUrediServisForm urediServis = new dodajUrediServisForm(idServisa);
+            urediServis.WindowState = FormWindowState.Maximized;
+            urediServis.MdiParent = this.MdiParent;
+            urediServis.Show();
         }
     }
 }

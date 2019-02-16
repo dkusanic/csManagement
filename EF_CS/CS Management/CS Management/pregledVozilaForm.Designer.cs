@@ -53,6 +53,8 @@
             this.servisTableAdapter = new CS_Management.CS_ManagementDataSet1TableAdapters.ServisTableAdapter();
             this.btnDodajVozilo = new System.Windows.Forms.Button();
             this.btnUrediVozilo = new System.Windows.Forms.Button();
+            this.btnDodajServis = new System.Windows.Forms.Button();
+            this.btnUrediServis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPregledVozila)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cS_ManagementDataSet)).BeginInit();
@@ -235,11 +237,33 @@
             this.btnUrediVozilo.UseVisualStyleBackColor = true;
             this.btnUrediVozilo.Click += new System.EventHandler(this.btnUrediVozilo_Click);
             // 
+            // btnDodajServis
+            // 
+            this.btnDodajServis.Location = new System.Drawing.Point(911, 299);
+            this.btnDodajServis.Name = "btnDodajServis";
+            this.btnDodajServis.Size = new System.Drawing.Size(131, 47);
+            this.btnDodajServis.TabIndex = 6;
+            this.btnDodajServis.Text = "Dodaj servis";
+            this.btnDodajServis.UseVisualStyleBackColor = true;
+            this.btnDodajServis.Click += new System.EventHandler(this.btnDodajServis_Click);
+            // 
+            // btnUrediServis
+            // 
+            this.btnUrediServis.Location = new System.Drawing.Point(911, 352);
+            this.btnUrediServis.Name = "btnUrediServis";
+            this.btnUrediServis.Size = new System.Drawing.Size(131, 47);
+            this.btnUrediServis.TabIndex = 7;
+            this.btnUrediServis.Text = "Uredi odabrani servis";
+            this.btnUrediServis.UseVisualStyleBackColor = true;
+            this.btnUrediServis.Click += new System.EventHandler(this.btnUrediServis_Click);
+            // 
             // pregledVozilaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 598);
+            this.Controls.Add(this.btnUrediServis);
+            this.Controls.Add(this.btnDodajServis);
             this.Controls.Add(this.btnUrediVozilo);
             this.Controls.Add(this.btnDodajVozilo);
             this.Controls.Add(this.dgvPopisServisa);
@@ -287,5 +311,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDvoziloDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnDodajVozilo;
         private System.Windows.Forms.Button btnUrediVozilo;
+        private System.Windows.Forms.Button btnDodajServis;
+        private System.Windows.Forms.Button btnUrediServis;
     }
 }

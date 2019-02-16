@@ -69,7 +69,11 @@ namespace CS_Management
                 cmbUsluga.ValueMember = "ID";
             }
         }
-
+        /// <summary>
+        /// Metoda koaj rukuje klikom na tipku Dodaj stavku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDodajStavku_Click(object sender, EventArgs e)
         {
             Stavka_servisa stavka_Servisa = new Stavka_servisa();            
@@ -96,7 +100,11 @@ namespace CS_Management
             dgvStavkeServisa.DataSource = null;
             dgvStavkeServisa.DataSource = stavke_Servisa;
         }
-
+        /// <summary>
+        /// Metoda koaj rukuje klikom na tipku Spremi
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSpremi_Click(object sender, EventArgs e)
         {
             servis.ID_serviser = prijavljeniServiser;
@@ -124,8 +132,13 @@ namespace CS_Management
 
             dgvStavkeServisa.DataSource = null;
             dgvStavkeServisa.DataSource = stavke_Servisa;
+            this.Close();
         }
-
+        /// <summary>
+        /// Metoda koja rukuje klikom na checkbox Omogućeno. Omogućuje unos ili dijela ili usluge za stavku servisa.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void chbOmogucenUsluga_CheckedChanged(object sender, EventArgs e)
         {
             if (chbOmogucenUsluga.Checked)
@@ -155,6 +168,15 @@ namespace CS_Management
             // TODO: This line of code loads data into the 'cS_ManagementDataSet11.Stavka_servisa' table. You can move, or remove it, as needed.
             this.stavka_servisaTableAdapter.Fill(this.cS_ManagementDataSet11.Stavka_servisa);
 
+        }
+        /// <summary>
+        /// Metoda koja rukuje klikom na tipku Izlaz
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -215,6 +215,7 @@
             this.btnOdustani.TabIndex = 15;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnSpremi
             // 

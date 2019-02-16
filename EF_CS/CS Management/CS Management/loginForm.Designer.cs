@@ -34,6 +34,7 @@
             this.lblKorime = new System.Windows.Forms.Label();
             this.lblLozinka = new System.Windows.Forms.Label();
             this.btnPrijava = new System.Windows.Forms.Button();
+            this.btnIzlaz = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtKorime
@@ -78,7 +79,7 @@
             // 
             this.btnPrijava.BackColor = System.Drawing.SystemColors.Control;
             this.btnPrijava.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPrijava.Location = new System.Drawing.Point(45, 190);
+            this.btnPrijava.Location = new System.Drawing.Point(45, 175);
             this.btnPrijava.Name = "btnPrijava";
             this.btnPrijava.Size = new System.Drawing.Size(125, 45);
             this.btnPrijava.TabIndex = 4;
@@ -86,11 +87,24 @@
             this.btnPrijava.UseVisualStyleBackColor = false;
             this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
+            // btnIzlaz
+            // 
+            this.btnIzlaz.BackColor = System.Drawing.SystemColors.Control;
+            this.btnIzlaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnIzlaz.Location = new System.Drawing.Point(45, 239);
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(125, 45);
+            this.btnIzlaz.TabIndex = 5;
+            this.btnIzlaz.Text = "Izlaz";
+            this.btnIzlaz.UseVisualStyleBackColor = false;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(226, 296);
+            this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.btnPrijava);
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.lblKorime);
@@ -113,5 +127,6 @@
         private System.Windows.Forms.Label lblKorime;
         private System.Windows.Forms.Label lblLozinka;
         private System.Windows.Forms.Button btnPrijava;
+        private System.Windows.Forms.Button btnIzlaz;
     }
 }

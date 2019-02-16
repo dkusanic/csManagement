@@ -43,21 +43,22 @@
             this.cmbDio = new System.Windows.Forms.ComboBox();
             this.lblDio = new System.Windows.Forms.Label();
             this.dgvStavkeServisa = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnSpremi = new System.Windows.Forms.Button();
-            this.cS_ManagementDataSet11 = new CS_Management.CS_ManagementDataSet11();
-            this.stavkaServisaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stavka_servisaTableAdapter = new CS_Management.CS_ManagementDataSet11TableAdapters.Stavka_servisaTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDservisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDdioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDuslugaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stavkaServisaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cS_ManagementDataSet11 = new CS_Management.CS_ManagementDataSet11();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSpremi = new System.Windows.Forms.Button();
+            this.stavka_servisaTableAdapter = new CS_Management.CS_ManagementDataSet11TableAdapters.Stavka_servisaTableAdapter();
+            this.btnIzlaz = new System.Windows.Forms.Button();
             this.grbStavkaServisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudKolicina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeServisa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cS_ManagementDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stavkaServisaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cS_ManagementDataSet11)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDatumVrijemeServisa
@@ -207,39 +208,6 @@
             this.dgvStavkeServisa.Size = new System.Drawing.Size(464, 265);
             this.dgvStavkeServisa.TabIndex = 5;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(321, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Stavke servisa:";
-            // 
-            // btnSpremi
-            // 
-            this.btnSpremi.Location = new System.Drawing.Point(679, 311);
-            this.btnSpremi.Name = "btnSpremi";
-            this.btnSpremi.Size = new System.Drawing.Size(109, 41);
-            this.btnSpremi.TabIndex = 10;
-            this.btnSpremi.Text = "Spremi";
-            this.btnSpremi.UseVisualStyleBackColor = true;
-            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
-            // 
-            // cS_ManagementDataSet11
-            // 
-            this.cS_ManagementDataSet11.DataSetName = "CS_ManagementDataSet11";
-            this.cS_ManagementDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stavkaServisaBindingSource
-            // 
-            this.stavkaServisaBindingSource.DataMember = "Stavka servisa";
-            this.stavkaServisaBindingSource.DataSource = this.cS_ManagementDataSet11;
-            // 
-            // stavka_servisaTableAdapter
-            // 
-            this.stavka_servisaTableAdapter.ClearBeforeFill = true;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -271,11 +239,55 @@
             this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Kolicina";
             this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
             // 
+            // stavkaServisaBindingSource
+            // 
+            this.stavkaServisaBindingSource.DataMember = "Stavka servisa";
+            this.stavkaServisaBindingSource.DataSource = this.cS_ManagementDataSet11;
+            // 
+            // cS_ManagementDataSet11
+            // 
+            this.cS_ManagementDataSet11.DataSetName = "CS_ManagementDataSet11";
+            this.cS_ManagementDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(321, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Stavke servisa:";
+            // 
+            // btnSpremi
+            // 
+            this.btnSpremi.Location = new System.Drawing.Point(324, 311);
+            this.btnSpremi.Name = "btnSpremi";
+            this.btnSpremi.Size = new System.Drawing.Size(109, 41);
+            this.btnSpremi.TabIndex = 10;
+            this.btnSpremi.Text = "Spremi";
+            this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
+            // 
+            // stavka_servisaTableAdapter
+            // 
+            this.stavka_servisaTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnIzlaz
+            // 
+            this.btnIzlaz.Location = new System.Drawing.Point(679, 311);
+            this.btnIzlaz.Name = "btnIzlaz";
+            this.btnIzlaz.Size = new System.Drawing.Size(109, 41);
+            this.btnIzlaz.TabIndex = 11;
+            this.btnIzlaz.Text = "Izlaz";
+            this.btnIzlaz.UseVisualStyleBackColor = true;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
+            // 
             // dodajUrediServisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 355);
+            this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvStavkeServisa);
@@ -291,8 +303,8 @@
             this.grbStavkaServisa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudKolicina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavkeServisa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cS_ManagementDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stavkaServisaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cS_ManagementDataSet11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,5 +336,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDdioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDuslugaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnIzlaz;
     }
 }

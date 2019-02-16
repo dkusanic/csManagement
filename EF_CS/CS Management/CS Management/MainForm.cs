@@ -33,13 +33,11 @@ namespace CS_Management
         {
             if (b==false)
             {
-                tsmiBazaS.Visible = false;
                 tsmiBazaV.Visible = false;
                 tsmiServiseri.Visible = false;
             }
             else
             {
-                tsmiBazaS.Visible = true;
                 tsmiBazaV.Visible = true;
                 tsmiServiseri.Visible = true;
             }
@@ -60,9 +58,17 @@ namespace CS_Management
         /// <param name="e"></param>
         private void tsmiZakljucaj_Click(object sender, EventArgs e)
         {
-            MainForm_Load(this, new EventArgs());
+            //MainForm_Load(this, new EventArgs());
+            MainForm glavna = new MainForm();
+            glavna.WindowState = FormWindowState.Maximized;
+            glavna.MdiParent = this.MdiParent;
+            glavna.Show();
         }
-
+        /// <summary>
+        /// Rukuje klikom u izborniku na Vozila-Pregled vozila
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsmiPregledVozila_Click(object sender, EventArgs e)
         {
             pregledVozilaForm pregledVozila = new pregledVozilaForm(prijavljeniServiser);
@@ -70,7 +76,11 @@ namespace CS_Management
             pregledVozila.MdiParent = this;
             pregledVozila.Show();
         }
-
+        /// <summary>
+        /// Rukuje klikom u izborniku na Vozila-Baza-Marke,modeli,varijante
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsmiMarka_Click(object sender, EventArgs e)
         {
             markaModelVarijantaForm Marke = new markaModelVarijantaForm();

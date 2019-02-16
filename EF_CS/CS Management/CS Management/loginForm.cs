@@ -35,7 +35,7 @@ namespace CS_Management
                 btnPrijava_Click(this, new EventArgs());
         }
         /// <summary>
-        /// Rukuje klikom na tipku Prijava
+        /// Rukuje klikom na tipku "Prijava"
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -65,6 +65,15 @@ namespace CS_Management
                 serviser.Servis = prijavljeniServiser.Servis;
                 serviser.Admin = prijavljeniServiser.Admin;
             }
+        }
+        /// <summary>
+        /// Metoda koja zatvara aplikaciju klikom na tipku "Izlaz"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

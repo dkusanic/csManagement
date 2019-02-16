@@ -82,7 +82,10 @@ namespace CS_Management
             this.markaTableAdapter.Fill(this.cS_ManagementDataSet7.Marka);
 
         }
-
+        /// <summary>
+        /// Metoda koja dohvaća modele odabrane marke
+        /// </summary>
+        /// <param name="index"></param>
         private void popuniModele(int index)
         {
             BindingList<Model> listaModela = new BindingList<Model>();
@@ -107,6 +110,10 @@ namespace CS_Management
             int markaId = cmbMarka.SelectedIndex + 1;
             popuniModele(markaId);
         }
+        /// <summary>
+        /// Metoda koja dohvaća varijante odabranog modela
+        /// </summary>
+        /// <param name="index"></param>
         private void popuniVarijante(int index)
         {
             BindingList<Varijanta> Varijante = new BindingList<Varijanta>();
@@ -141,7 +148,11 @@ namespace CS_Management
                 pomIndex = index;
             }
         }
-
+        /// <summary>
+        /// Metoda koja rukuje klikom na tipku Spremi
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSpremi_Click(object sender, EventArgs e)
         {
             if(indexVozila > -1)
@@ -186,6 +197,15 @@ namespace CS_Management
                     pomIndex = (int)modelId;
                 }
             }
+        }
+        /// <summary>
+        /// Metoda koja rukuje klikom na tipku Odustani
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -48,12 +48,16 @@ namespace CS_Management
             }
             servisBindingSource.DataSource = servisiVozila;
         }
-
+        
         private void dgvPregledVozila_SelectionChanged(object sender, EventArgs e)
         {
             pregledServisa((int)dgvPregledVozila.CurrentRow.Cells[0].Value);
         }
-
+        /// <summary>
+        /// Metoda koja rukuje klikom na tipku Dodaj vozilo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDodajVozilo_Click(object sender, EventArgs e)
         {
             dodajUrediVoziloForm dodajVozilo = new dodajUrediVoziloForm();
@@ -61,7 +65,11 @@ namespace CS_Management
             dodajVozilo.MdiParent = this.MdiParent;
             dodajVozilo.Show();
         }
-
+        /// <summary>
+        /// Metoda koja rukuje klikom na tipku Uredi odabrano vozilo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUrediVozilo_Click(object sender, EventArgs e)
         {
             int voziloId = 0;
@@ -76,7 +84,11 @@ namespace CS_Management
             urediVozilo.MdiParent = this.MdiParent;
             urediVozilo.Show();
         }
-
+        /// <summary>
+        /// Metoda koja rukuje klikom na tipku Dodaj servis
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDodajServis_Click(object sender, EventArgs e)
         {
             int idVozila = (int)dgvPregledVozila.CurrentRow.Cells[0].Value;
@@ -85,7 +97,11 @@ namespace CS_Management
             dodajServis.MdiParent = this.MdiParent;
             dodajServis.Show();
         }
-
+        /// <summary>
+        /// Metoda koaj rukuje klikom na tipku Uredi odabrani servis
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUrediServis_Click(object sender, EventArgs e)
         {
             int idServisa = (int)dgvPopisServisa.CurrentRow.Cells[0].Value;

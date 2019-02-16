@@ -26,6 +26,10 @@ namespace CS_Management
             // TODO: This line of code loads data into the 'cS_ManagementDataSet.voziloView' table. You can move, or remove it, as needed.
             this.voziloViewTableAdapter.Fill(this.cS_ManagementDataSet.voziloView);
         }
+        /// <summary>
+        /// Metoda koja dohvaća servise odabranog vozila
+        /// </summary>
+        /// <param name="index"></param>
         private void pregledServisa(int index)
         {
             listaServisa = null;

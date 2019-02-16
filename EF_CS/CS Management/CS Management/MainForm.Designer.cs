@@ -38,8 +38,6 @@
             this.tsmiUnosVozila = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBazaV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMarka = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiModel = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiVarijanta = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiServis = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUnosServisa = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPregledServisa = new System.Windows.Forms.ToolStripMenuItem();
@@ -108,9 +106,7 @@
             // tsmiBazaV
             // 
             this.tsmiBazaV.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiMarka,
-            this.tsmiModel,
-            this.tsmiVarijanta});
+            this.tsmiMarka});
             this.tsmiBazaV.Name = "tsmiBazaV";
             resources.ApplyResources(this.tsmiBazaV, "tsmiBazaV");
             // 
@@ -119,16 +115,6 @@
             this.tsmiMarka.Name = "tsmiMarka";
             resources.ApplyResources(this.tsmiMarka, "tsmiMarka");
             this.tsmiMarka.Click += new System.EventHandler(this.tsmiMarka_Click);
-            // 
-            // tsmiModel
-            // 
-            this.tsmiModel.Name = "tsmiModel";
-            resources.ApplyResources(this.tsmiModel, "tsmiModel");
-            // 
-            // tsmiVarijanta
-            // 
-            this.tsmiVarijanta.Name = "tsmiVarijanta";
-            resources.ApplyResources(this.tsmiVarijanta, "tsmiVarijanta");
             // 
             // tsmiServis
             // 
@@ -224,8 +210,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiUnosVozila;
         private System.Windows.Forms.ToolStripMenuItem tsmiBazaV;
         private System.Windows.Forms.ToolStripMenuItem tsmiMarka;
-        private System.Windows.Forms.ToolStripMenuItem tsmiModel;
-        private System.Windows.Forms.ToolStripMenuItem tsmiVarijanta;
         private System.Windows.Forms.ToolStripMenuItem tsmiServis;
         private System.Windows.Forms.ToolStripMenuItem tsmiUnosServisa;
         private System.Windows.Forms.ToolStripMenuItem tsmiPregledServisa;

@@ -70,6 +70,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CS_ManagementDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CS_ManagementDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CS_ManagementModel.cs" />
     <Compile Include="Dijelovi.cs" />
     <Compile Include="loginForm.cs">
@@ -85,11 +105,11 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Marka.cs" />
-    <Compile Include="markaForm.cs">
+    <Compile Include="markaModelVarijantaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="markaForm.Designer.cs">
-      <DependentUpon>markaForm.cs</DependentUpon>
+    <Compile Include="markaModelVarijantaForm.Designer.cs">
+      <DependentUpon>markaModelVarijantaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model.cs" />
     <Compile Include="pregledVozilaForm.cs">
@@ -115,8 +135,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="markaForm.resx">
-      <DependentUpon>markaForm.cs</DependentUpon>
+    <EmbeddedResource Include="markaModelVarijantaForm.resx">
+      <DependentUpon>markaModelVarijantaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pregledVozilaForm.resx">
       <DependentUpon>pregledVozilaForm.cs</DependentUpon>
@@ -162,6 +182,50 @@
     </None>
     <None Include="CS_ManagementDataSet2.xss">
       <DependentUpon>CS_ManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet3.xsc">
+      <DependentUpon>CS_ManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet3.xss">
+      <DependentUpon>CS_ManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet4.xsc">
+      <DependentUpon>CS_ManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet4.xss">
+      <DependentUpon>CS_ManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet5.xsc">
+      <DependentUpon>CS_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet5.xss">
+      <DependentUpon>CS_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet6.xsc">
+      <DependentUpon>CS_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet6.xss">
+      <DependentUpon>CS_ManagementDataSet6.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

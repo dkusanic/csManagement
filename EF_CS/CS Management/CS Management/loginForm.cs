@@ -51,6 +51,8 @@ namespace CS_Management
                     else
                         MessageBox.Show("Pogrešno korisničko ime i/ili lozinka!\nPokušajte ponovno!");
                 }
+                else
+                    MessageBox.Show("Pogrešno korisničko ime i/ili lozinka!\nPokušajte ponovno!");
             }
         }
     }

@@ -71,7 +71,7 @@ namespace CS_Management
 
         private void tsmiMarka_Click(object sender, EventArgs e)
         {
-            markaForm Marke = new markaForm();
+            markaModelVarijantaForm Marke = new markaModelVarijantaForm();
             Marke.WindowState = FormWindowState.Maximized;
             Marke.MdiParent = this;
             Marke.Show();

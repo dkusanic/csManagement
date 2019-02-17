@@ -121,71 +121,17 @@
     <value>122, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tsmiZakljucaj.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="tsmiZakljucaj.Text" xml:space="preserve">
-    <value>Zaključaj</value>
-  </data>
-  <data name="tsmiIzlaz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="tsmiIzlaz.Text" xml:space="preserve">
-    <value>Izlaz</value>
-  </data>
   <data name="tsmiAplikacija.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 20</value>
   </data>
   <data name="tsmiAplikacija.Text" xml:space="preserve">
     <value>Aplikacija</value>
   </data>
-  <data name="tsmiPregledVozila.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="tsmiPregledVozila.Text" xml:space="preserve">
-    <value>Pregled vozila</value>
-  </data>
-  <data name="tsmiMarka.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 22</value>
-  </data>
-  <data name="tsmiMarka.Text" xml:space="preserve">
-    <value>Marke, modeli, varijante</value>
-  </data>
-  <data name="tsmiDijelovi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 22</value>
-  </data>
-  <data name="tsmiDijelovi.Text" xml:space="preserve">
-    <value>Dijelovi</value>
-  </data>
-  <data name="tsmiUsluge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 22</value>
-  </data>
-  <data name="tsmiUsluge.Text" xml:space="preserve">
-    <value>Usluge</value>
-  </data>
-  <data name="tsmiBazaV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="tsmiBazaV.Text" xml:space="preserve">
-    <value>Baza</value>
-  </data>
   <data name="tsmiVozila.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 20</value>
   </data>
   <data name="tsmiVozila.Text" xml:space="preserve">
     <value>Vozila</value>
-  </data>
-  <data name="tsmiPregledVlasnika.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="tsmiPregledVlasnika.Text" xml:space="preserve">
-    <value>Pregled vlasnika</value>
-  </data>
-  <data name="tsmiUnosVlasnika.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="tsmiUnosVlasnika.Text" xml:space="preserve">
-    <value>Unos vlasnika</value>
   </data>
   <data name="vlasniciToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 20</value>
@@ -229,6 +175,54 @@
   </data>
   <data name="&gt;&gt;menuIzbornik.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="tsmiZakljucaj.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="tsmiZakljucaj.Text" xml:space="preserve">
+    <value>Zaključaj</value>
+  </data>
+  <data name="tsmiIzlaz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="tsmiIzlaz.Text" xml:space="preserve">
+    <value>Izlaz</value>
+  </data>
+  <data name="tsmiPregledVozila.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 22</value>
+  </data>
+  <data name="tsmiPregledVozila.Text" xml:space="preserve">
+    <value>Pregled vozila</value>
+  </data>
+  <data name="tsmiBazaV.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 22</value>
+  </data>
+  <data name="tsmiBazaV.Text" xml:space="preserve">
+    <value>Baza</value>
+  </data>
+  <data name="tsmiMarka.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 22</value>
+  </data>
+  <data name="tsmiMarka.Text" xml:space="preserve">
+    <value>Marke, modeli, varijante</value>
+  </data>
+  <data name="tsmiDijelovi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 22</value>
+  </data>
+  <data name="tsmiDijelovi.Text" xml:space="preserve">
+    <value>Dijelovi</value>
+  </data>
+  <data name="tsmiUsluge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 22</value>
+  </data>
+  <data name="tsmiUsluge.Text" xml:space="preserve">
+    <value>Usluge</value>
+  </data>
+  <data name="tsmiPregledVlasnika.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="tsmiPregledVlasnika.Text" xml:space="preserve">
+    <value>Pregled vlasnika</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -6497,6 +6491,18 @@
   <data name="&gt;&gt;tsmiMarka.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;tsmiDijelovi.Name" xml:space="preserve">
+    <value>tsmiDijelovi</value>
+  </data>
+  <data name="&gt;&gt;tsmiDijelovi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsmiUsluge.Name" xml:space="preserve">
+    <value>tsmiUsluge</value>
+  </data>
+  <data name="&gt;&gt;tsmiUsluge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;vlasniciToolStripMenuItem.Name" xml:space="preserve">
     <value>vlasniciToolStripMenuItem</value>
   </data>
@@ -6509,12 +6515,6 @@
   <data name="&gt;&gt;tsmiPregledVlasnika.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tsmiUnosVlasnika.Name" xml:space="preserve">
-    <value>tsmiUnosVlasnika</value>
-  </data>
-  <data name="&gt;&gt;tsmiUnosVlasnika.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;tsmiServiseri.Name" xml:space="preserve">
     <value>tsmiServiseri</value>
   </data>
@@ -6525,18 +6525,6 @@
     <value>tsmiPregledServisera</value>
   </data>
   <data name="&gt;&gt;tsmiPregledServisera.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsmiDijelovi.Name" xml:space="preserve">
-    <value>tsmiDijelovi</value>
-  </data>
-  <data name="&gt;&gt;tsmiDijelovi.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsmiUsluge.Name" xml:space="preserve">
-    <value>tsmiUsluge</value>
-  </data>
-  <data name="&gt;&gt;tsmiUsluge.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

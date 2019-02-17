@@ -75,6 +75,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CS_ManagementDataSet11.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CS_ManagementDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CS_ManagementDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS_ManagementDataSet13.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CS_ManagementDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,11 +127,23 @@
     </Compile>
     <Compile Include="CS_ManagementModel.cs" />
     <Compile Include="Dijelovi.cs" />
+    <Compile Include="pregledServiseraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pregledServiseraForm.Designer.cs">
+      <DependentUpon>pregledServiseraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="dodajUrediServisForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dodajUrediServisForm.Designer.cs">
       <DependentUpon>dodajUrediServisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pregledVlasnikaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pregledVlasnikaForm.Designer.cs">
+      <DependentUpon>pregledVlasnikaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="dodajUrediVoziloForm.cs">
       <SubType>Form</SubType>
@@ -167,8 +189,14 @@
     <Compile Include="Vlasnistvo.cs" />
     <Compile Include="Vozilo.cs" />
     <Compile Include="voziloView.cs" />
+    <EmbeddedResource Include="pregledServiseraForm.resx">
+      <DependentUpon>pregledServiseraForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dodajUrediServisForm.resx">
       <DependentUpon>dodajUrediServisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pregledVlasnikaForm.resx">
+      <DependentUpon>pregledVlasnikaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dodajUrediVoziloForm.resx">
       <DependentUpon>dodajUrediVoziloForm.cs</DependentUpon>
@@ -194,6 +222,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="CS_ManagementDataSet.xsc">
       <DependentUpon>CS_ManagementDataSet.xsd</DependentUpon>
     </None>
@@ -237,6 +266,28 @@
     </None>
     <None Include="CS_ManagementDataSet11.xss">
       <DependentUpon>CS_ManagementDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet12.xsc">
+      <DependentUpon>CS_ManagementDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet12.xss">
+      <DependentUpon>CS_ManagementDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet13.xsc">
+      <DependentUpon>CS_ManagementDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="CS_ManagementDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CS_ManagementDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CS_ManagementDataSet13.xss">
+      <DependentUpon>CS_ManagementDataSet13.xsd</DependentUpon>
     </None>
     <None Include="CS_ManagementDataSet2.xsc">
       <DependentUpon>CS_ManagementDataSet2.xsd</DependentUpon>

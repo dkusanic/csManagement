@@ -20,6 +20,14 @@ namespace CS_Management
             InitializeComponent();
         }
 
+        public MainForm MainForm
+        {
+            get => default(MainForm);
+            set
+            {
+            }
+        }
+
         private void loginForm_Load(object sender, EventArgs e)
         {
             this.ActiveControl = txtKorime;
@@ -57,13 +65,17 @@ namespace CS_Management
                 else
                     MessageBox.Show("Pogrešno korisničko ime i/ili lozinka!\nPokušajte ponovno!");
 
-                serviser.ID = prijavljeniServiser.ID;
-                serviser.Ime = prijavljeniServiser.Ime;
-                serviser.Kor_ime = prijavljeniServiser.Kor_ime;
-                serviser.Lozinka = prijavljeniServiser.Lozinka;
-                serviser.Prezime = prijavljeniServiser.Prezime;
-                serviser.Servis = prijavljeniServiser.Servis;
-                serviser.Admin = prijavljeniServiser.Admin;
+                if(prijavljeniServiser != null)
+                {
+                    serviser.ID = prijavljeniServiser.ID;
+                    serviser.Ime = prijavljeniServiser.Ime;
+                    serviser.Kor_ime = prijavljeniServiser.Kor_ime;
+                    serviser.Lozinka = prijavljeniServiser.Lozinka;
+                    serviser.Prezime = prijavljeniServiser.Prezime;
+                    serviser.Servis = prijavljeniServiser.Servis;
+                    serviser.Admin = prijavljeniServiser.Admin;
+                }
+                
             }
         }
         /// <summary>

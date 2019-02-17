@@ -37,13 +37,12 @@
             this.tsmiPregledVozila = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBazaV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMarka = new System.Windows.Forms.ToolStripMenuItem();
-            this.vlasniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiPregledVlasnika = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiUnosVlasnika = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiServiseri = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiPregledServisera = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDijelovi = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUsluge = new System.Windows.Forms.ToolStripMenuItem();
+            this.vlasniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiPregledVlasnika = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiServiseri = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiPregledServisera = new System.Windows.Forms.ToolStripMenuItem();
             this.menuIzbornik.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,11 +105,20 @@
             resources.ApplyResources(this.tsmiMarka, "tsmiMarka");
             this.tsmiMarka.Click += new System.EventHandler(this.tsmiMarka_Click);
             // 
+            // tsmiDijelovi
+            // 
+            this.tsmiDijelovi.Name = "tsmiDijelovi";
+            resources.ApplyResources(this.tsmiDijelovi, "tsmiDijelovi");
+            // 
+            // tsmiUsluge
+            // 
+            this.tsmiUsluge.Name = "tsmiUsluge";
+            resources.ApplyResources(this.tsmiUsluge, "tsmiUsluge");
+            // 
             // vlasniciToolStripMenuItem
             // 
             this.vlasniciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiPregledVlasnika,
-            this.tsmiUnosVlasnika});
+            this.tsmiPregledVlasnika});
             this.vlasniciToolStripMenuItem.Name = "vlasniciToolStripMenuItem";
             resources.ApplyResources(this.vlasniciToolStripMenuItem, "vlasniciToolStripMenuItem");
             // 
@@ -118,11 +126,7 @@
             // 
             this.tsmiPregledVlasnika.Name = "tsmiPregledVlasnika";
             resources.ApplyResources(this.tsmiPregledVlasnika, "tsmiPregledVlasnika");
-            // 
-            // tsmiUnosVlasnika
-            // 
-            this.tsmiUnosVlasnika.Name = "tsmiUnosVlasnika";
-            resources.ApplyResources(this.tsmiUnosVlasnika, "tsmiUnosVlasnika");
+            this.tsmiPregledVlasnika.Click += new System.EventHandler(this.tsmiPregledVlasnika_Click);
             // 
             // tsmiServiseri
             // 
@@ -135,16 +139,7 @@
             // 
             this.tsmiPregledServisera.Name = "tsmiPregledServisera";
             resources.ApplyResources(this.tsmiPregledServisera, "tsmiPregledServisera");
-            // 
-            // tsmiDijelovi
-            // 
-            this.tsmiDijelovi.Name = "tsmiDijelovi";
-            resources.ApplyResources(this.tsmiDijelovi, "tsmiDijelovi");
-            // 
-            // tsmiUsluge
-            // 
-            this.tsmiUsluge.Name = "tsmiUsluge";
-            resources.ApplyResources(this.tsmiUsluge, "tsmiUsluge");
+            this.tsmiPregledServisera.Click += new System.EventHandler(this.tsmiPregledServisera_Click);
             // 
             // MainForm
             // 
@@ -174,7 +169,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiMarka;
         private System.Windows.Forms.ToolStripMenuItem vlasniciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiPregledVlasnika;
-        private System.Windows.Forms.ToolStripMenuItem tsmiUnosVlasnika;
         private System.Windows.Forms.ToolStripMenuItem tsmiServiseri;
         private System.Windows.Forms.ToolStripMenuItem tsmiPregledServisera;
         private System.Windows.Forms.ToolStripMenuItem tsmiDijelovi;

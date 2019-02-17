@@ -49,7 +49,7 @@ namespace CS_Management
         /// <param name="e"></param>
         private void tsmiIzlaz_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
         /// <summary>
         /// Rukuje klikom u izborniku na Aplikacija-Zaključaj
@@ -87,6 +87,30 @@ namespace CS_Management
             Marke.WindowState = FormWindowState.Maximized;
             Marke.MdiParent = this;
             Marke.Show();
+        }
+        /// <summary>
+        /// Rukuje klikom u izborniku na Vlasnici-Popis vlasnika
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiPregledVlasnika_Click(object sender, EventArgs e)
+        {
+            pregledVlasnikaForm Vlasnici = new pregledVlasnikaForm();
+            Vlasnici.WindowState = FormWindowState.Maximized;
+            Vlasnici.MdiParent = this;
+            Vlasnici.Show();
+        }
+        /// <summary>
+        /// Rukuje klikom u izborniku na Serviseri-Pregled servisera
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiPregledServisera_Click(object sender, EventArgs e)
+        {
+            pregledServiseraForm Serviseri = new pregledServiseraForm();
+            Serviseri.WindowState = FormWindowState.Maximized;
+            Serviseri.MdiParent = this;
+            Serviseri.Show();
         }
     }
 }

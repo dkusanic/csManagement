@@ -21,6 +21,14 @@ namespace CS_Management
             InitializeComponent();
         }
 
+        public MainForm MainForm
+        {
+            get => default(MainForm);
+            set
+            {
+            }
+        }
+
         private void pregledVozilaForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'cS_ManagementDataSet1.Servis' table. You can move, or remove it, as needed.

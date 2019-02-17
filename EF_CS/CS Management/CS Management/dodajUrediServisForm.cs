@@ -52,8 +52,7 @@ namespace CS_Management
         public dodajUrediServisForm(int selektiranoVozilo, int prijavljeniServiser)
         {
             this.selektiranoVozilo = selektiranoVozilo;
-            this.prijavljeniServiser = prijavljeniServiser;   
-
+            this.prijavljeniServiser = prijavljeniServiser;
             InitializeComponent();
 
             using (var context = new CS_ManagementModel())

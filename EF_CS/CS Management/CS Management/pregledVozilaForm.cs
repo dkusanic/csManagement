@@ -64,6 +64,7 @@ namespace CS_Management
             dodajVozilo.WindowState = FormWindowState.Maximized;
             dodajVozilo.MdiParent = this.MdiParent;
             dodajVozilo.Show();
+            this.Close();
         }
         /// <summary>
         /// Metoda koja rukuje klikom na tipku Uredi odabrano vozilo

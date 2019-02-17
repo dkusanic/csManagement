@@ -26,6 +26,7 @@ namespace CS_Management
         {
             return (Oznaka_motora + " " + konvertMjenjac() + " " + konvertKaroserija());
         }
+
         public string konvertMjenjac()
         {
             switch (Mjenjač)

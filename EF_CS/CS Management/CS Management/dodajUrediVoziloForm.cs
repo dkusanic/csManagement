@@ -164,7 +164,6 @@ namespace CS_Management
                     context.Entry(voziloKojeAzuriramo).State = System.Data.Entity.EntityState.Modified;
                     context.SaveChanges();
                 }
-                this.Close();
             }
 
             else
@@ -180,9 +179,8 @@ namespace CS_Management
                     context.Vozilo.Add(novoVozilo);
                     context.SaveChanges();
                 }
-                this.Close();
             }
-
+            this.Close();
         }
 
         private void cmbVarijanta_SelectedIndexChanged(object sender, EventArgs e)

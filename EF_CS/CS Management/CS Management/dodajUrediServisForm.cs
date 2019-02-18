@@ -166,7 +166,7 @@ namespace CS_Management
         {
             // TODO: This line of code loads data into the 'cS_ManagementDataSet11.Stavka_servisa' table. You can move, or remove it, as needed.
             this.stavka_servisaTableAdapter.Fill(this.cS_ManagementDataSet11.Stavka_servisa);
-
+            dgvStavkeServisa.DataSource = null;
         }
         /// <summary>
         /// Metoda koja rukuje klikom na tipku Izlaz

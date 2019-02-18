@@ -42,11 +42,6 @@
             this.cS_ManagementDataSet = new CS_Management.CS_ManagementDataSet();
             this.lblPregledServisa = new System.Windows.Forms.Label();
             this.dgvPopisServisa = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datumvrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDserviserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDvoziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.servisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cS_ManagementDataSet1 = new CS_Management.CS_ManagementDataSet1();
             this.voziloViewTableAdapter = new CS_Management.CS_ManagementDataSetTableAdapters.voziloViewTableAdapter();
@@ -55,6 +50,11 @@
             this.btnUrediVozilo = new System.Windows.Forms.Button();
             this.btnDodajServis = new System.Windows.Forms.Button();
             this.btnUrediServis = new System.Windows.Forms.Button();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datumvrijemeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDserviserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDvoziloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPregledVozila)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voziloViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cS_ManagementDataSet)).BeginInit();
@@ -168,37 +168,6 @@
             this.dgvPopisServisa.Size = new System.Drawing.Size(893, 247);
             this.dgvPopisServisa.TabIndex = 3;
             // 
-            // iDDataGridViewTextBoxColumn1
-            // 
-            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
-            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // datumvrijemeDataGridViewTextBoxColumn
-            // 
-            this.datumvrijemeDataGridViewTextBoxColumn.DataPropertyName = "Datum_vrijeme";
-            this.datumvrijemeDataGridViewTextBoxColumn.HeaderText = "Datum_vrijeme";
-            this.datumvrijemeDataGridViewTextBoxColumn.Name = "datumvrijemeDataGridViewTextBoxColumn";
-            // 
-            // opisDataGridViewTextBoxColumn
-            // 
-            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
-            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
-            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
-            // 
-            // iDserviserDataGridViewTextBoxColumn
-            // 
-            this.iDserviserDataGridViewTextBoxColumn.DataPropertyName = "ID_serviser";
-            this.iDserviserDataGridViewTextBoxColumn.HeaderText = "ID_serviser";
-            this.iDserviserDataGridViewTextBoxColumn.Name = "iDserviserDataGridViewTextBoxColumn";
-            // 
-            // iDvoziloDataGridViewTextBoxColumn
-            // 
-            this.iDvoziloDataGridViewTextBoxColumn.DataPropertyName = "ID_vozilo";
-            this.iDvoziloDataGridViewTextBoxColumn.HeaderText = "ID_vozilo";
-            this.iDvoziloDataGridViewTextBoxColumn.Name = "iDvoziloDataGridViewTextBoxColumn";
-            // 
             // servisBindingSource
             // 
             this.servisBindingSource.DataMember = "Servis";
@@ -257,6 +226,38 @@
             this.btnUrediServis.UseVisualStyleBackColor = true;
             this.btnUrediServis.Click += new System.EventHandler(this.btnUrediServis_Click);
             // 
+            // iDDataGridViewTextBoxColumn1
+            // 
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // datumvrijemeDataGridViewTextBoxColumn
+            // 
+            this.datumvrijemeDataGridViewTextBoxColumn.DataPropertyName = "Datum_vrijeme";
+            this.datumvrijemeDataGridViewTextBoxColumn.HeaderText = "Datum_vrijeme";
+            this.datumvrijemeDataGridViewTextBoxColumn.Name = "datumvrijemeDataGridViewTextBoxColumn";
+            // 
+            // opisDataGridViewTextBoxColumn
+            // 
+            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
+            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
+            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
+            // 
+            // iDserviserDataGridViewTextBoxColumn
+            // 
+            this.iDserviserDataGridViewTextBoxColumn.DataPropertyName = "ID_serviser";
+            this.iDserviserDataGridViewTextBoxColumn.HeaderText = "ID_serviser";
+            this.iDserviserDataGridViewTextBoxColumn.Name = "iDserviserDataGridViewTextBoxColumn";
+            // 
+            // iDvoziloDataGridViewTextBoxColumn
+            // 
+            this.iDvoziloDataGridViewTextBoxColumn.DataPropertyName = "ID_vozilo";
+            this.iDvoziloDataGridViewTextBoxColumn.HeaderText = "ID_vozilo";
+            this.iDvoziloDataGridViewTextBoxColumn.Name = "iDvoziloDataGridViewTextBoxColumn";
+            this.iDvoziloDataGridViewTextBoxColumn.Visible = false;
+            // 
             // pregledVozilaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,14 +305,14 @@
         private CS_ManagementDataSet1 cS_ManagementDataSet1;
         private System.Windows.Forms.BindingSource servisBindingSource;
         private CS_ManagementDataSet1TableAdapters.ServisTableAdapter servisTableAdapter;
+        private System.Windows.Forms.Button btnDodajVozilo;
+        private System.Windows.Forms.Button btnUrediVozilo;
+        private System.Windows.Forms.Button btnDodajServis;
+        private System.Windows.Forms.Button btnUrediServis;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumvrijemeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDserviserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDvoziloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnDodajVozilo;
-        private System.Windows.Forms.Button btnUrediVozilo;
-        private System.Windows.Forms.Button btnDodajServis;
-        private System.Windows.Forms.Button btnUrediServis;
     }
 }
